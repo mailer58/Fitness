@@ -1,0 +1,305 @@
+.page-header {
+    background-image: url("../img/gradient@1x-mobile.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    height: 491px;
+}
+
+.page-header__container {
+    min-width: $mobile-width;
+    max-width: 440px;
+    padding: 0 $mobile-padding;
+    margin: 0 auto;
+}
+
+.page-header__superior-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px auto 0 auto;
+}
+
+.page-header__inferior-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-bottom: 116px;
+    min-width: $mobile-content;
+    margin: 0 auto;
+}
+
+.page-header__inferior-container {
+    position: relative;
+}
+
+.page-header__city {
+    font-family: $bebas;
+    font-size: 28px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    color: $white;
+    margin: 0;
+    margin-left: 238px;
+    margin-top: 72px;
+    margin-bottom: 9px;
+}
+
+.page-header__caption {
+    font-family: $bebas-bold;
+    font-weight: 700;
+    font-size: 78px;
+    line-height: 78px;
+    color: $white;
+    width: 220px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 47px;
+    margin-left: 69px;
+    text-align: right;
+    letter-spacing: 0.01em;
+}
+
+.page-header__list {
+    @include list-reset;
+    position: absolute;
+    font-size: 14px;
+    line-height: 21px;
+    color: $white;
+    left: -1px;
+    top: 84px;
+
+    li {
+        text-align: right;
+    }
+}
+
+.page-header__logo-mobile {
+    display: block;
+}
+
+.page-header__logo-desktop {
+    display: none;
+}
+
+.page-header__logo-tablet {
+    display: none;
+}
+
+.page-header__phone {
+    font-family: $bebas;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    color: $white;
+}
+
+.page-header__subscription {
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.05em;
+    color: $white;
+    margin: 0 auto;
+    padding: 19px 82px;
+}
+
+.page-header__social-list {
+    display: none
+}
+
+@media (min-width: $tablet-width) {
+    .page-header {
+        background-image: url("../img/gradient@1x-tablet.jpg");
+        height: 554px;
+    }
+
+    .page-header__container {
+        min-width: $tablet-width;
+        max-width: $tablet-content;
+    }
+
+    .page-header__superior-wrapper {
+        margin-top: 38px;
+        width: 678px;
+    }
+
+    .page-header__inferior-wrapper {
+        align-items: flex-start;
+        margin: 0 auto;
+        background-image: url("../img/sportsman@1x-tablet.jpg");
+        background-repeat: no-repeat;
+        background-position: 384px 20px;
+
+        @media (min-resolution: $retina-dpi),
+        (min-resolution: $retina-dppx) {
+            background-image: url("../img/sportsman@2x-tablet.jpg");
+            background-size: 324px auto;
+        }
+    }
+
+    .page-header__logo-mobile {
+        display: none;
+    }
+
+    .page-header__logo-desktop {
+        display: none;
+    }
+
+    .page-header__logo-tablet {
+        display: block;
+    }
+
+
+    .page-header__phone {
+        font-size: 24px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+    }
+
+    .page-header__city {
+        font-size: 34px;
+        line-height: 34px;
+        margin-left: 291px;
+        margin-bottom: 4px;
+    }
+
+    .page-header__caption {
+        font-size: 86px;
+        line-height: 86px;
+        margin-left: 119px;
+        margin-bottom: 44px;
+        width: 234px;
+    }
+
+    .page-header__list {
+        left: 30px;
+        top: 96px;
+    }
+
+    .page-header__subscription {
+        margin: 0 0 0 167px;
+        padding: 20px 33px;
+    }
+}
+
+
+@media (min-width: $desktop-width) {
+
+    .page-header {
+        background-image: url("../img/gradient@1x-desktop.jpg");
+        background-size: $max-width 658px;
+        height: 658px;
+    }
+
+    .page-header__container {
+        min-width: $desktop-width;
+        max-width: $max-width;
+    }
+
+    .page-header__superior-wrapper {
+        margin: 26px auto 0 auto;
+        width: 1160px;
+    }
+
+    .page-header__inferior-wrapper {
+        padding-bottom: 116px;
+        width: 1141px;
+        margin: 0 auto;
+        background-image: url("../img/sportsman@1x-desktop.jpg");
+        background-repeat: no-repeat;
+        background-position: 451px 0px;
+
+        @media (min-resolution: $retina-dpi),
+        (min-resolution: $retina-dppx) {
+            background-image: url("../img/sportsman@2x-desktop.jpg");
+            background-size: 500px auto;
+        }
+    }
+
+    .page-header__logo-mobile {
+        display: none;
+    }
+
+    .page-header__logo-tablet {
+        display: none;
+    }
+
+    .page-header__logo-desktop {
+        display: block;
+    }
+
+    .page-header__subscription {
+        font-family: $roboto-condensed;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 14px;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.05em;
+        color: $white;
+        margin-left: 210px;
+    }
+
+    .page-header__phone {
+        font-size: 26px;
+        line-height: 25px;
+        letter-spacing: 0.03em;
+        color: $white;
+        margin-right: 3px;
+    }
+
+    .page-header__city {
+        font-size: 49px;
+        line-height: 49px;
+        margin: 116px 0 7px 296px;
+    }
+
+    .page-header__caption {
+        font-size: 109px;
+        line-height: 109px;
+        width: 335px;
+        margin: 0 0 64px 51px;
+        letter-spacing: 0.03em;
+    }
+
+    .page-header__list {
+        left: 10px;
+        top: 133px;
+    }
+
+    .page-header__logo-desktop {
+        margin-top: 2px;
+    }
+
+    .page-header__subscription {
+        padding: 18px 53px;
+        margin-left: 155px;
+    }
+
+    .page-header__social-list {
+        display: block;
+        @include list-reset;
+        position: absolute;
+        left: 1139px;
+        top: 262px;
+        font-family: $roboto-condensed;
+        font-size: 12px;
+        line-height: 14px;
+        text-transform: uppercase;
+
+        a {
+            color: $white;
+        }
+
+        li {
+            margin-bottom: 20px;
+        }
+
+        li:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

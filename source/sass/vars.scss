@@ -1,0 +1,24 @@
+$white: rgb(255, 255, 255);
+$text-color: rgb(102, 102, 102);
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+$desktop-width: 1200px;
+$tablet-width: 768px;
+$mobile-width: 320px;
+$max-width:  1366px;
+
+$tablet-content: 678px;
+$mobile-content: 290px;
+$main-content-width: 1220px; // 1170px + $desktop-padding * 2
+$header-content-width: 1422px;
+$form-width: 570px;
+
+$desktop-padding: 25px;
+$tablet-padding: 45px;
+$mobile-padding: 15px;
+
+$roboto-condensed: "Roboto Condensed", "Arial", sans-serif;
+$bebas: "Bebas Neue", "Arial", sans-serif;
+$bebas-bold: "Bebas Neue Bold", "Arial", sans-serif;
