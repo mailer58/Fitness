@@ -1,0 +1,81 @@
+.trainers {
+    padding-top: 67px;
+}
+
+.trainers__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 290px;
+    margin: 0 auto;
+}
+
+.trainers__caption {
+    font-family: $bebas;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 44px;
+}
+
+.trainers__photos-wrapper {
+    position: relative;
+
+    &::before {
+        @include pseudo;
+        width: 227px;
+        height: 276px;
+        background-color: rgba(16, 38, 84, 0.89);
+    }
+}
+
+.trainers__info-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 227px;
+    height: 276px;
+    padding-top: 44px;
+    text-align: center;
+}
+
+.trainers__name {
+    color: $white;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0;
+}
+
+.trainers__discipline {
+    color: rgb(182, 189, 204);
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.trainers__info-list {
+    @include list-reset;
+    text-align: left;
+    margin-left: 50px;
+}
+
+.trainers__info-item {
+    position: relative;
+    color: $white;
+    font-size: 14px;
+    margin-bottom: 9px;
+
+    &::before {
+        @include pseudo;
+        width: 6px;
+        height: 6px;
+        top: 10px;
+        left: -15px;
+        background-color: $white;
+        border-radius: 50%;
+    }
+}

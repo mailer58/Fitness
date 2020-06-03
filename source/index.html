@@ -33,28 +33,124 @@
             <div class="page-header__inferior-wrapper">
                 <h2 class="page-header__city">Омск</h2>
                 <div class="page-header__inferior-container">
-                <h1 class="page-header__caption">Фитнес центр</h1>
-                <ul class="page-header__list">
-                    <li class="page-header__list-item">Тренажёрный зал</li>
-                    <li class="page-header__list-item">Групповые занятия</li>
-                    <li class="page-header__list-item">Кардио-зона</li>
-                </ul>
-                <ul class="page-header__social-list">
-                    <li class="page-header__social-item">
-                        <a href="#" class="page-header__social-link">FB</a>
-                    </li>
-                    <li class="page-header__social-item">
-                        <a href="#" class="page-header__social-link">VK</a>
-                    </li>
-                    <li class="page-header__social-item">
-                        <a href="#" class="page-header__social-link">IG</a>
-                    </li>
-                </ul>
-            </div>
+                    <h1 class="page-header__caption">Фитнес центр</h1>
+                    <ul class="page-header__list">
+                        <li class="page-header__list-item">Тренажёрный зал</li>
+                        <li class="page-header__list-item">Групповые занятия</li>
+                        <li class="page-header__list-item">Кардио-зона</li>
+                    </ul>
+                    <ul class="page-header__social-list">
+                        <li class="page-header__social-item">
+                            <a href="#" class="page-header__social-link">FB</a>
+                        </li>
+                        <li class="page-header__social-item">
+                            <a href="#" class="page-header__social-link">VK</a>
+                        </li>
+                        <li class="page-header__social-item">
+                            <a href="#" class="page-header__social-link">IG</a>
+                        </li>
+                    </ul>
+                </div>
                 <span class="page-header__subscription button-templet">Купить абонемент</span>
             </div>
         </div>
     </header>
+    <main class="page-main">
+        <section class="info">
+            <div class="info__wrapper">
+                <h2 class="info__caption">Тренажерный зал</h2>
+                <h3 class="info__subcaption">Просторный зал площадью 900 кв/м</h3>
+                <p class="info__description">
+                    Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья.
+                    Тренажерный зал оснащен всем необходимым современным оборудованием для всех
+                    спортсменов.</p>
+            </div>
+            <div class="info__picture-wrapper">
+                <picture>
+                    <source type="image/webp" media="(min-width:768px)"
+                        srcset="img/gymnasium@1x-tablet.webp 1x, img/gymnasium@2x-tablet.webp 2x">
+                    <source media="(min-width:768px)"
+                        srcset="img/gymnasium@1x-tablet.jpg 1x, img/gymnasium@2x-tablet.jpg 2x">
+                    <source type="image/webp" media="(min-width:320px)"
+                        srcset="img/gymnasium@1x-mobile.webp 1x, img/gymnasium@2x-mobile.webp 2x">
+                    <img src="img/gymnasium@1x-mobile.jpg" width="320" height="313" alt="Тренажёрный зал">
+                </picture>
+            </div>
+            <div class="info__video-wrapper">
+                <video width="320" height="167" class="info__video">
+                    <source src="#">
+                </video>
+            </div>
+        </section>
+        <section class="subscriptions">
+            <h2 class="subscriptions__caption">Абонементы</h2>
+            <ul class="subscriptions__months-list">
+                <li class="subscriptions__month-item subscriptions__month-item--selected">1 месяц</li>
+                <li class="subscriptions__month-item">6 месяцев</li>
+                <li class="subscriptions__month-item">12 месяцев</li>
+            </ul>
+            <div class="subscriptions__card subscriptions__card--coach">
+                <h2 class="subscriptions__type">С тренером</h2>
+                <h3 class="subscriptions__duration">12 занятий</h3>
+                <p class="subscriptions__price">5000 <span class="subscriptions__ruble">&#8381</span></p>
+                <a href="#" class="subscriptions__button button-templet">Купить абонемент</a>
+            </div>
+            <div class="subscriptions__card subscriptions__card--selected subscriptions__card--day">
+                <h2 class="subscriptions__type">Дневной</h2>
+                <h3 class="subscriptions__duration">С 8:00 до 17:00</h3>
+                <p class="subscriptions__price">1700 <span class="subscriptions__ruble">&#8381</span></p>
+                <a href="#" class="subscriptions__button subscriptions__button--selected button-templet">Купить
+                    абонемент</a>
+            </div>
+            <div class="subscriptions__card subscriptions__card--full-day">
+                <h2 class="subscriptions__type">Полный день</h2>
+                <h3 class="subscriptions__duration">С 8:00 до 22:00</h3>
+                <p class="subscriptions__price">2700 <span class="subscriptions__ruble">&#8381</span></p>
+                <a href="#" class="subscriptions__button button-templet">Купить абонемент</a>
+            </div>
+        </section>
+        <section class="competition">
+            <div class="competition__wrapper">
+                <h2 class="competition__caption">Super Games</h2>
+                <div class="competition__date-wrapper">
+                    <p class="competition__date-title">Дата</p>
+                    <div class="competition__date-container">
+                        <p class="competition__date-number">7</p>
+                        <p class="competition__date-text">марта 2019</p>
+                    </div>
+                    <div class="competition__date-wrapper">
+                        <p class="competition__time-title">Время</p>
+                        <p class="competition__time">12:00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="competition__container">
+                <p class="competition__description">Ежегодные соревнования по CrossFit</p>
+                <a href="#" class="competition__button button-templet">Заполнить заявку</a>
+            </div>
+        </section>
+        <section class="trainers">
+            <div class="trainers__wrapper">
+                <h2 class="trainers__caption">Тренеры</h2>
+                <div class="trainers__photos-wrapper">
+                    <img class="trainers__photo" src="img/pashkov@1x-mobile.jpg" alt="Тренер Александр Пашков"
+                        width="227" height="76">
+                    <div class="trainers__info-wrapper">
+                        <h2 class="trainers__name">Александр Пашков</h2>
+                        <h3 class="trainers__discipline">CrossFit</h3>
+                        <ul class="trainers__info-list">
+                            <li class="trainers__info-item">
+                                Certified Level 3 Trainer</li>
+                            <li class="trainers__info-item">
+                                Победитель чемпионата России по CrossFit</li>
+                            <li class="trainers__info-item">
+                                Опыт — 6 лет</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>

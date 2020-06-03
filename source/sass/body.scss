@@ -4,11 +4,11 @@ body {
   margin: 0;
   padding: 0;
   color: $text-color;
-  font-family: "Roboto Condensed", "Arial", sans-serif;
-  font-weight: normal;
+  font-family: $roboto-condensed;
   font-size: 16px;
   font-style: normal;
-  line-height: 22px;
+  font-weight: 400;
+  line-height: 24px;
   background-color: $white;
   position: relative;
   display: flex;

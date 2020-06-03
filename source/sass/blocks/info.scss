@@ -1,0 +1,128 @@
+.info {
+    margin-bottom: 70px;
+}
+
+.info__wrapper {
+    margin: 0 auto;
+    padding: 67px $mobile-padding 0 $mobile-padding;
+}
+
+.info__caption {
+    font-family: $bebas-bold;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: 0.03em;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.info__subcaption {
+    margin: 0;
+    margin-bottom: 23px;
+    
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.info__description {
+    margin: 0;
+    margin-bottom: 32px;
+    width: 267px;
+    font-weight: 300;
+}
+
+/* .info__gymnasium {
+    display: block;
+    margin: 0 auto 40px auto;
+} */
+
+.info__picture-wrapper {
+    margin-bottom: 34px;
+}
+
+.info__video-wrapper {
+    position: relative;
+    width: 320px;
+    height: 167px;
+    margin: 0 auto;
+    background:
+        url("../img/play-button.svg") no-repeat,
+        url("../img/playButton@1x-mobile.png") no-repeat,
+        url("../img/video-color@1x-mobile.jpg") no-repeat,
+        url("../img/video@1x-mobile.jpg") no-repeat;
+
+    background-size: 9px 12px, 52px 52px, 320px 167px, 320px 167px;
+    background-position: center, center;
+
+
+    @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+        background-image:
+            url("../img/play-button.svg"),
+            url("../img/playButton@1x-mobile.png"),
+            url("../img/video-color@1x-mobile.jpg"),
+            url("../img/video@2x-mobile.jpg");
+        background-size: 320px auto;
+    }
+
+    &::before {
+        @include pseudo;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 73px;
+        height: 73px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        z-index: 2000;
+        border: 2px solid rgba(16, 38, 84, 0.2);
+        border-radius: 50%;
+    }
+
+    &:hover::before {
+        border: 2px solid $white;
+    }
+
+}
+
+.info__video {
+    display: block;
+    cursor: pointer;
+}
+
+@media (min-width: 350px) {
+    .info__wrapper {
+        width: 320px;
+        padding: 0;
+        padding-top: 67px;
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .info__wrapper {
+        min-width: $tablet-width;
+        padding-top: 97px;
+    }
+
+    .info__caption {
+        font-family: $bebas;
+        font-weight: 700;
+        font-size: 42px;
+        line-height: 42px;
+        text-align: center;
+        letter-spacing: 0.02em;
+    }
+
+    .info__subcaption {
+        text-align: center;
+        margin-bottom: 34px;
+    }
+
+    .info__description {
+        width: 520px;
+        text-align: center;
+        margin: 0 auto;
+    }
+}

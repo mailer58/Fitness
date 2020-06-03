@@ -1,0 +1,147 @@
+.subscriptions {
+    background-color: rgb(248, 249, 252);
+    padding-top: 68px;
+    padding-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subscriptions__caption {
+    font-family: $bebas;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin: 0 0 23px 0;
+}
+
+.subscriptions__months-list {
+    @include list-reset;
+    margin-bottom: 34px;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 290px;
+    position: relative;
+
+    &::before {
+        @include pseudo;
+        width: 290px;
+        height: 2px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(120, 120, 120, 0.2);
+
+    }
+}
+
+.subscriptions__month-item {
+    padding-bottom: 11px;
+    color: rgba(16, 38, 84, 0.5);
+}
+
+.subscriptions__month-item--selected {
+    border-bottom: 2px solid rgb(209, 10, 66);
+    padding-bottom: 11px;
+    color: $text-color;
+}
+
+.subscriptions__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 290px;
+    min-height: 384px;
+    background-color: $white;
+    padding-top: 44px;
+    position: relative;
+    margin-bottom: 35px;
+    border: 8px solid $white;
+
+    &::before {
+        @include pseudo("5000");
+        font-size: 40px;
+        top: 109px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: green;
+        z-index: 0;
+        font-weight: 700;
+        font-size: 80px;
+        line-height: 120px;
+        color: rgb(232, 232, 232);
+        opacity: 0.48;
+    }
+}
+
+.subscriptions__card--selected {
+    border: 8px solid transparent;
+    border-image: linear-gradient(111.72deg, #B80027 17.6%, #1b3261 95.31%);
+    border-image-slice: 1;
+}
+
+.subscriptions__card--coach::before {
+    content: "1500";
+
+}
+
+.subscriptions__card--day::before {
+    content: "1700";
+}
+
+.subscriptions__card--full-day {
+    margin-bottom: 0;
+
+    &::before {
+        content: "2700";
+    }
+}
+
+.subscriptions__type {
+    font-weight: 700;
+    font-size: 22px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.subscriptions__duration {
+    color: rgb(73, 90, 125);
+    font-weight: 300;
+    font-size: 15px;
+    margin: 0;
+    margin-bottom: 52px;
+}
+
+.subscriptions__price {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 72px;
+    margin: 0;
+    margin-bottom: 30px;
+    color: rgb(16, 58, 174);
+    position: relative;
+    z-index: 1000;
+}
+
+.subscriptions__ruble {
+    color: $text-color;
+}
+
+.subscriptions__button {
+    border: 2px solid $text-color;
+    padding: 25px 44px;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.05em;
+}
+
+.subscriptions__button:hover,
+.subscriptions__button--selected {
+    color: $white;
+    border: 2px solid $white;
+    background: linear-gradient(111.72deg, #ED0233 17.6%, #003EB7 95.31%)
+}
