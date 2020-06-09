@@ -1,0 +1,307 @@
+.advantages {
+    background-color: rgb(248, 249, 252);
+    padding-top: 68px;
+    padding-bottom: 19px;
+}
+
+.advantages__advantage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 42px;
+}
+
+.advantages__advantage-subcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.advantages__advantage--training-devices {
+    background-color: rgb(28, 51, 116);
+    padding-top: 35px;
+    padding-bottom: 42px;
+    margin-bottom: 48px;
+}
+
+.advantages__caption {
+    font-family: $bebas;
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    margin: 0;
+    margin-bottom: 53px;
+    text-align: center;
+}
+
+.advantages__img {
+    margin-bottom: 1px;
+    display: block;
+}
+
+.advantages__entity {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 14px;
+    color: rgb(46, 53, 172);
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.advantages__entity--training-devices {
+    color: $white;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 33px;
+    margin: 0;
+    margin-bottom: 7px;
+}
+
+.advantages__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0;
+}
+
+.advantages__description {
+    font-weight: 300;
+    line-height: 24px;
+    margin: 0;
+    width: 182px;
+    text-align: center;
+}
+
+.advantages__description--parking {
+    width: 235px;
+}
+
+.advantages__description--training-devices {
+    color: $white;
+    margin: 0;
+}
+
+.advantages__description--places {
+    width: 188px;
+}
+
+.advantages__description--experience {
+    width: 237px;
+}
+
+.advantages__number {
+    font-weight: 700;
+    font-size: 74px;
+    line-height: 72px;
+    color: $white;
+    margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+    .advantages {
+        padding-top: 95px;
+        padding-bottom: 49px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .advantages__caption {
+        font-size: 42px;
+        line-height: 42px;
+        letter-spacing: 0.02em;
+        margin-bottom: 48px;
+    }
+
+    .advantages__main-wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        min-height: 160px;
+        width: $tablet-width;
+        margin: 0 auto;
+    }
+
+    .advantages__advantage {
+        flex-direction: row;
+        align-items: flex-start;
+        margin-bottom: 39px;
+    }
+
+    .advantages__advantage--area {
+        margin-right: 52px;
+    }
+
+    .advantages__advantage--training-devices {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 442px;
+        padding-top: 29px;
+        padding-bottom: 38px;
+        margin-bottom: 47px;
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+
+    .advantages__advantage--places {
+        margin-right: 38px;
+    }
+
+    .advantages__advantage-subcontainer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .advantages__advantage-subcontainer--left {
+        margin-right: 35px;
+    }
+
+    .advantages__img {
+        margin-bottom: 4px;
+    }
+
+    .advantages__title {
+        line-height: 20px;
+        margin-bottom: 5px;
+    }
+
+    .advantages__description {
+        text-align: left;
+    }
+
+    .advantages__description--training-devices {
+        width: 185px;
+        text-align: center;
+    }
+
+    .advantages__number {
+        margin-bottom: 2px;
+    }
+
+    .advantages__entity--training-devices {
+        margin-bottom: 15px;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .advantages {
+        padding-top: 117px;
+        padding-bottom: 0;
+    }
+
+    .advantages__caption {
+        font-size: 49px;
+        line-height: 49px;
+        margin-bottom: 66px;
+    }
+
+    .advantages__main-wrapper {
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        max-height: 430px;
+        width: 1180px;
+        padding-left: 90px;
+    }
+
+    .advantages__wrapper {
+        width: 985px;
+    }
+
+    .advantages__advantage {
+        width: 341px;
+        margin-bottom: 140px;
+    }
+
+    .advantages__advantage--area {
+        order: 1;
+        width: 322px;
+        margin-bottom: 151px;
+        margin-left: 8px;
+        margin-right: 0;
+    }
+
+    .advantages__advantage--places {
+        order: 2;
+        width: 329px;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+
+    .advantages__advantage--experience {
+        order: 5;
+        margin-bottom: 0;
+        margin-right: 13px;
+    }
+
+    .advantages__advantage--training-devices {
+        order: 3;
+        width: 240px;
+        min-height: 307px;
+        margin: 3px 9px 0 0;
+        padding-top: 52px;
+    }
+
+    .advantages__advantage--parking {
+        order: 4;
+        margin-bottom: 151px;
+        margin-right: 13px;
+    }
+
+    .advantages__img {
+        margin-bottom: 30px;
+        margin-bottom: 2px;
+    }
+
+    .advantages__number {
+        margin-bottom: 5px;
+    }
+
+    .advantages__entity {
+        font-size: 14px;
+        line-height: 14px;
+    }
+
+    .advantages__entity--training-devices {
+        font-size: 26px;
+        line-height: 39px;
+        margin-bottom: 33px;
+    }
+
+    .advantages__description--area {
+        position: relative;
+    
+        &::before {
+            @include pseudo;
+            background-color:rgba(209, 10, 66, 0.2);
+            width: 340px;
+            height: 2px;
+            top: 123px;
+            left: -164px;
+        }
+    }
+
+    .advantages__description--parking {
+        position: relative;
+        &::before {
+            @include pseudo;
+            background-color:rgba(209, 10, 66, 0.2);
+            width: 340px;
+            height: 2px;
+            top: 123px;
+            left: -105px;
+        }
+    }
+
+    .advantages__title {
+        font-size: 22px;
+        line-height: 24px;
+        margin-bottom: 9px;
+    }
+
+}

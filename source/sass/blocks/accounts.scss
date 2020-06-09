@@ -1,0 +1,177 @@
+.accounts {
+    padding-top: 68px;
+    padding-bottom: 70px;
+}
+
+.accounts__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 293px;
+    margin: 0 auto;
+}
+
+.accounts__caption {
+    font-family: $bebas;
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    margin: 0;
+    margin-bottom: 44px;
+    text-align: center;
+}
+
+.accounts__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 226px;
+    min-height: 335px;
+    background: rgb(28, 51, 116);
+    box-shadow: 0px 0px 40px rgba(28, 51, 116, 0.2);
+    margin: 0 auto;
+    padding-top: 46px;
+    position: relative;
+
+    &:before {
+        @include pseudo;
+        background-image: url("../img/orlova@1x-mobile.png");
+        width: 68px;
+        height: 68px;
+        top: 39px;
+        left: 41px;
+
+        @media (min-resolution: $retina-dpi),
+        (min-resolution: $retina-dppx) {
+            background-image: url("../img/orlova@2x-mobile.png");
+            background-size: 68px auto;
+        }
+    }
+}
+
+.accounts__user-name {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    color: $white;
+    margin: 0;
+    margin-left: 102px;
+    width: 80px;
+    margin-bottom: 25px;
+}
+
+.accounts__account {
+    line-height: 22px;
+    text-align: center;
+    color: $white;
+    width: 180px;
+    margin: 0;
+}
+
+.accounts__left-arrow-mobile,
+.accounts__right-arrow-mobile,
+.accounts__left-arrow-tablet,
+.accounts__right-arrow-tablet {
+    stroke: rgb(175, 175, 175);
+}
+
+.accounts__left-arrow-tablet,
+.accounts__right-arrow-tablet {
+    display: none;
+}
+
+.accounts__right-arrow-btn {
+    top: 156px;
+    right: 18px;
+}
+
+.accounts__left-arrow-btn {
+    top: 156px;
+    left: 6px;
+}
+
+@media (min-width: $tablet-width) {
+    .accounts {
+        padding-top: 97px;
+        padding-bottom: 101px;
+    }
+
+    .accounts__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: $tablet-content;
+        margin: 0 auto;
+    }
+
+    .accounts__caption {
+        font-size: 42px;
+        line-height: 42px;
+    }
+
+    .accounts__card {
+        align-items: flex-start;
+        width: 566px;
+        min-height: 242px;
+        padding-left: 174px;
+        padding-top: 53px;
+
+        &::before {
+            width: 80px;
+            height: 80px;
+            top: 63px;
+            left: 65px;
+            background-image: url("../img/orlova@1x-tablet.png");
+            background-repeat: no-repeat;
+        }
+    }
+
+    .accounts__user-name {
+        margin-left: 0;
+        margin-bottom: 14px;
+        font-size: 20px;
+        line-height: 30px;
+        width: 319px;
+    }
+
+    .accounts__account {
+        margin-left: 0;
+        text-align: left;
+        width: 330px;
+    }
+
+    .accounts__left-arrow-mobile,
+    .accounts__right-arrow-mobile {
+        display: none;
+    }
+
+    .accounts__left-arrow-tablet,
+    .accounts__right-arrow-tablet {
+        display: block;
+    }
+
+    .accounts__left-arrow-btn {
+        top: 105px;
+        left: -9px;
+    }
+
+    .accounts__right-arrow-btn {
+        top: 105px;
+        right: 7px;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .accounts {
+        padding-top: 116px;
+        margin-bottom: 19px;
+    }
+
+    .accounts__caption {
+        font-size: 49px;
+        line-height: 49px;
+        margin-bottom: 54px;
+    }
+}

@@ -1,0 +1,19 @@
+.arrow-templet {
+    padding: 0;
+    background: none;
+    border: none;
+    width: 12px;
+    height: 21px;
+    cursor: pointer;
+
+    &:hover svg {
+        stroke: $dark-blue;
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .arrow-templet {
+        width: 18px;
+        height: 34px;
+    }
+}

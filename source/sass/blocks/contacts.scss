@@ -1,0 +1,142 @@
+.contacts {
+    padding-top: 68px;
+    padding-bottom: 47px;
+}
+
+.contacts__wrapper {
+    width: 290px;
+    margin: 0 auto;
+}
+
+.contacts__caption-wrapper {
+    width: 290px;
+    margin: 0 auto;
+}
+
+.contacts__caption {
+    font-family: $bebas;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0.03em;
+    margin: 0;
+    margin-bottom: 36px;
+    width: 120px;
+}
+
+.contacts__subtitle {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0;
+    margin-bottom: 6px;
+}
+
+.contacts__data {
+    font-size: 18px;
+    line-height: 27px;
+    color: $dark-blue;
+    margin: 0;
+    margin-bottom: 18px;
+    display: block;
+}
+
+.contacts__data--link:hover {
+    color: $vinous;
+}
+
+@media (min-width: $tablet-width) {
+    .contacts {
+        padding-top: 67px;
+        padding-bottom: 44px;
+    }
+
+    .contacts__wrapper {
+        display: flex;
+        width: 500px;
+        position: relative;
+
+        &::before {
+            @include pseudo;
+            width: 1px;
+            height: 129px;
+            top: 8px;
+            left: 265px;
+            background-color: rgb(116, 129, 156);
+        }
+    }
+
+    .contacts__caption-wrapper {
+        width: $tablet-width;
+    }
+
+    .contacts__caption {
+        font-size: 42px;
+        line-height: 42px;
+        letter-spacing: 0;
+        width: 500px;
+        margin: 0 auto;
+        margin-bottom: 36px;
+    }
+
+    .contacts__subcontainer--left {
+        margin-right: 96px;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .contacts {
+        width: 600px;
+    }
+
+    .contacts__caption-wrapper {
+        width: fit-content;
+        margin: 0;
+    }
+
+    .contacts__caption {
+        font-size: 49px;
+        line-height: 49px;
+        margin: 0;
+        margin-left: 122px;
+        margin-bottom: 42px;
+        width: 177px;
+    }
+
+    .contacts__subtitle {
+        font-size: inherit;
+        line-height: inherit;
+        width: 115px;
+    }
+
+    .contacts__wrapper {
+        justify-content: flex-start;
+        margin: 0;
+        margin-left: 124px;
+        width: 460px;
+
+        &::before {
+            height: 102px;
+            left: 230px;
+        }
+    }
+
+    .contacts__subcontainer {
+        width: fit-content;
+    }
+
+    .contacts__subcontainer--left {
+        margin: 0;
+    }
+
+    .contacts__subcontainer--right {
+        margin-left: 120px;
+    }
+
+    .contacts__data {
+        font-size: 14px;
+        line-height: 21px;
+        margin-bottom: 14px;
+        width: 170px;
+    }
+}

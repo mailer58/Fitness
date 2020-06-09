@@ -17,10 +17,10 @@
     margin-bottom: 10px;
 }
 
-.info__subcaption {
+.info__subtitle {
     margin: 0;
     margin-bottom: 23px;
-    
+
     font-size: 18px;
     line-height: 27px;
 }
@@ -32,13 +32,25 @@
     font-weight: 300;
 }
 
-/* .info__gymnasium {
-    display: block;
-    margin: 0 auto 40px auto;
-} */
+.info__description--desktop {
+    display: none;
+}
 
 .info__picture-wrapper {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    min-height: 520px;
     margin-bottom: 34px;
+    background-image: url("../img/gymnasium@1x-mobile.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+
+    @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+        background-image: url("../img/gymnasium@2x-mobile.jpg");
+        background-size: 320px auto;
+    }
 }
 
 .info__video-wrapper {
@@ -47,19 +59,18 @@
     height: 167px;
     margin: 0 auto;
     background:
-        url("../img/play-button.svg") no-repeat,
+        url("../img/play-triangle.svg") no-repeat,
         url("../img/playButton@1x-mobile.png") no-repeat,
         url("../img/video-color@1x-mobile.jpg") no-repeat,
         url("../img/video@1x-mobile.jpg") no-repeat;
 
-    background-size: 9px 12px, 52px 52px, 320px 167px, 320px 167px;
-    background-position: center, center;
+    background-position: center center;
 
 
     @media (min-resolution: $retina-dpi),
     (min-resolution: $retina-dppx) {
         background-image:
-            url("../img/play-button.svg"),
+            url("../img/play-triangle.svg"),
             url("../img/playButton@1x-mobile.png"),
             url("../img/video-color@1x-mobile.jpg"),
             url("../img/video@2x-mobile.jpg");
@@ -101,9 +112,17 @@
 }
 
 @media (min-width: $tablet-width) {
+    .info {
+        margin-bottom: 100px;
+    }
+
     .info__wrapper {
-        min-width: $tablet-width;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: $tablet-width;
         padding-top: 97px;
+        margin-bottom: 44px;
     }
 
     .info__caption {
@@ -111,18 +130,133 @@
         font-weight: 700;
         font-size: 42px;
         line-height: 42px;
-        text-align: center;
         letter-spacing: 0.02em;
     }
 
-    .info__subcaption {
-        text-align: center;
+    .info__subtitle {
         margin-bottom: 34px;
     }
 
     .info__description {
-        width: 520px;
+        width: 516px;
+        margin-bottom: 0;
         text-align: center;
+    }
+
+    .info__picture-wrapper {
+        min-height: 428px;
+        background-image: url("../img/gymnasium@1x-tablet.jpg");
+
+        @media (min-resolution: $retina-dpi),
+        (min-resolution: $retina-dppx) {
+            background-image:
+                url("../img/gymnasium@2x-tablet.jpg");
+            background-size: $tablet-content auto;
+            background-position: top;
+        }
+    }
+
+    .info__video-wrapper,
+    .info__video {
+        width: 266px;
+    }
+
+    .info__video-wrapper {
+        background:
+            url("../img/play-triangle.svg") no-repeat,
+            url("../img/playButton@1x-mobile.png") no-repeat,
+            url("../img/video-color@1x-tablet.jpg") no-repeat,
+            url("../img/video@1x-tablet.jpg") no-repeat;
+
+        background-position: center;
+
+        @media (min-resolution: $retina-dpi),
+        (min-resolution: $retina-dppx) {
+            background-image:
+                url("../img/play-triangle.svg"),
+                url("../img/playButton@1x-mobile.png"),
+                url("../img/video-color@1x-tablet.jpg"),
+                url("../img/video@2x-tablet.jpg");
+            background-size: 266px auto;
+            background-position: center;
+        }
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .info {
         margin: 0 auto;
+        padding-top: 68px;
+        padding-bottom: 235px;
+        position: relative;
+    }
+
+    .info__wrapper {
+        margin: 0 auto;
+        align-items: flex-start;
+        padding-left: 80px;
+        padding-bottom: 22px;
+        padding-right: $desktop-padding;
+        width: $desktop-width;
+        background-image: url("../img/gymnasium@1x-desktop.jpg");
+        background-position: 520px 51px;
+        background-repeat: no-repeat;
+    }
+
+    .info__caption {
+        font-size: 49px;
+        line-height: 49px;
+    }
+
+    .info__subtitle {
+        margin-bottom: 37px;
+    }
+
+    .info__description {
+        width: 360px;
+        margin-bottom: 9px;
+    }
+
+    .info__description--desktop {
+        display: block;
+    }
+
+    .info__picture-wrapper {
+        position: absolute;
+        top: 407px;
+        left: 50%;
+        transform: translateX(-39%);
+        align-items: flex-start;
+        background-image: none;
+    }
+
+    .info__video-wrapper {
+        position: relative;
+        width: 364px;
+        height: 228px;
+        margin: 0 auto;
+        background:
+            url("../img/play-triangle.svg") no-repeat,
+            url("../img/playButton@1x-desktop.png") no-repeat,
+            url("../img/video-color@1x-desktop.jpg") no-repeat,
+            url("../img/video@1x-desktop.jpg") no-repeat;
+
+        background-position: center center;
+
+
+        @media (min-resolution: $retina-dpi),
+        (min-resolution: $retina-dppx) {
+            background-image:
+                url("../img/play-triangle.svg"),
+                url("../img/playButton@1x-desktop.png"),
+                url("../img/video-color@1x-desktop.jpg"),
+                url("../img/video@2x-desktop.jpg");
+            background-size: 364px auto;
+        }
+
+        &::before {
+            width: 100px;
+            height: 100px;
+        }
     }
 }

@@ -1,0 +1,143 @@
+.cost-free {
+    padding-top: 68px;
+    padding-bottom: 68px;
+    background-color: $dark-blue;
+}
+
+.cost-free__wrapper {
+    margin: 0 auto;
+    width: 290px;
+}
+
+.cost-free__caption {
+    font-family: $bebas;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: 0.03em;
+    color: $white;
+    margin: 0;
+    margin-bottom: 34px;
+}
+
+.cost-free__fieldset {
+    @include fieldset-reset;
+}
+
+.cost-free__input {
+    display: block;
+    background-color: $dark-blue;
+    border: 0 none;
+    color: $white;
+    font-size: 13px;
+    line-height: 16px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid rgb(116, 129, 156);
+    padding: 7px 0;
+    width: 290px;
+
+    &::-webkit-input-placeholder {
+        color: $white;
+    }
+
+    &:placeholder-shown {
+        color: $white;
+    }
+
+    &:focus-within {
+        outline: none;
+    }
+}
+
+.cost-free__input--phone {
+    margin-bottom: 39px;
+}
+
+.cost-free__button {
+    font: inherit;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: $white;
+    background-color: transparent;
+    border: 3px solid $white;
+    padding: 13px 98px;
+    margin: 0 auto;
+
+    &:hover {
+        background-image: linear-gradient(111.72deg, #B80027 17.6%, #1b3261 95.31%);
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .cost-free {
+        padding-top: 66px;
+    }
+
+    .cost-free__caption {
+        font-size: 42px;
+        line-height: 42px;
+        letter-spacing: 0.02em;
+        margin-bottom: 33px;
+    }
+
+    .cost-free__wrapper {
+        width: $tablet-content;
+        padding-left: 86px;
+        padding-right: 117px;
+    }
+
+    .cost-free__inputs-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 28px;
+    }
+
+    .cost-free__input {
+        width: 206px;
+        margin-bottom: 0;
+    }
+
+    .cost-free__button {
+        width: 100%;
+        padding: 13px 15px;
+        letter-spacing: normal;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .cost-free {
+        width: 600px;
+        padding-top: 67px;
+    }
+
+    .cost-free__caption {
+        font-size: 49px;
+        line-height: 49px;
+        margin-bottom: 37px;
+        width: 372px;
+    }
+
+    .cost-free__wrapper {
+        padding: 0;
+        width: 450px;
+        margin: 0;
+        margin-left: 19px;
+    }
+
+    .cost-free__inputs-wrapper {
+        justify-content: flex-start;
+
+        input {
+            font-size: 14px;
+            margin-right: 30px;
+            width: 192px;
+        }
+    }
+
+    .cost-free__button {
+        margin: 0;
+        width: 413px;
+        border-width: 3px;
+    }
+}

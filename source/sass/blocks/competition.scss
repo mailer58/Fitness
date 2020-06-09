@@ -1,12 +1,22 @@
 .competition {
-    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 70px $mobile-padding 292px $mobile-padding;
+    background-image: url("../img/swimmer@1x-mobile.jpg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+
+    @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+        background-image: url("../img/swimmer@2x-mobile.jpg");
+        background-size: 290px auto;
+    }
 }
 
 .competition__wrapper {
     display: flex;
     width: 290px;
     margin: 0 auto;
-    margin-top: 70px;
     background-color: rgb(237, 2, 53);
     padding-bottom: 2px;
 }
@@ -105,10 +115,7 @@
     width: 290px;
     margin: 0 auto;
     background-color: rgb(237, 2, 53);
-    padding-bottom: 341px;
-    background-image: url("../img/swimmer@1x-mobile.jpg");
-    background-position: bottom;
-    background-repeat: no-repeat;
+    padding-bottom: 49px;
 }
 
 .competition__button {
@@ -119,4 +126,131 @@
     line-height: 12px;
     letter-spacing: 0.05em;
     color: $white;
+
+    &:hover {
+        background: linear-gradient(111.72deg, rgb(237, 2, 51) 17.6%, $blue 95.31%);
+    }
+}
+
+.competition__image {
+    display: block;
+    margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+    .competition {
+        padding: 0;
+        padding-top: 44px;
+        margin: 0 auto;
+        width: $tablet-content;
+        background-image: url("../img/swimmer@1x-tablet.jpg");
+        background-position: 292px 44px;
+
+        @media (min-resolution: $retina-dpi),
+        (min-resolution: $retina-dppx) {
+            background-image: url("../img/swimmer@2x-tablet.jpg");
+            background-size: 386px auto;
+        }
+    }
+
+    .competition__wrapper {
+        width: 292px;
+        margin: 0;
+    }
+
+    .competition__container {
+        width: 292px;
+        margin: 0;
+        padding-bottom: 47px;
+    }
+
+    .competition__image {
+        margin: 0;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .competition {
+        align-items: flex-start;
+        padding-top: 49px;
+        width: 1158px;
+        margin: 0 auto;
+        background-image: url("../img/swimmer@1x-desktop.jpg");
+        background-position: right 49px;
+    }
+
+    .competition__caption {
+        font-size: 90px;
+        line-height: 90px;
+    }
+
+    .competition__wrapper {
+        width: 500px;
+        padding-top: 32px;
+        padding-bottom: 10px;
+    }
+
+    .competition__caption {
+        margin-left: 77px;
+        margin-right: 51px;
+        width: 200px;
+    }
+
+    .competition__date-title,
+    .competition__time-title {
+        font-size: 18px;
+        line-height: 27px;
+        margin-left: 0;
+    }
+
+    .competition__date-number,
+    .competition__time {
+        font-size: 40px;
+        line-height: 60px;
+        margin-left: 0;
+    }
+
+    .competition__container {
+        width: 500px;
+        align-items: flex-start;
+        padding-bottom: 82px;
+    }
+
+    .competition__date-title::before {
+        top: 32px;
+        width: 64px;
+    }
+
+    .competition__time-title::before {
+        top: 31px;
+        width: 88px;
+    }
+
+    .competition__date-text {
+        font-size: 14px;
+        line-height: 19px;
+        margin-top: 10px;
+        margin-left: 8px;
+    }
+
+    .competition__date-container {
+        margin-bottom: 9px;
+    }
+
+    .competition__description {
+        font-size: 18px;
+        line-height: 27px;
+        margin-left: 77px;
+        margin-bottom: 44px;
+    }
+
+    .competition__button {
+        margin: 0 auto;
+        border-width: 4px;
+        padding: 26px 5px;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.05em;
+        width: 348px;
+    }
 }

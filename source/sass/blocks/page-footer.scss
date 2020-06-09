@@ -1,0 +1,212 @@
+.page-footer {
+    padding-top: 49px;
+    background-color: rgb(3, 10, 26);
+}
+
+.page-footer__logo-tablet,
+.page-footer__logo-desktop {
+    display: none;
+}
+
+.page-footer__wrapper {
+    width: 290px;
+    margin: 0 auto;
+}
+
+.page-footer__list {
+    @include list-reset;
+    display: flex;
+    flex-wrap: wrap;
+    width: 280px;
+    margin-bottom: 34px;
+
+    li {
+        width: 57%;
+        margin-bottom: 14px;
+    }
+
+    li:nth-child(2n) {
+        width: 43%;
+    }
+
+    li:nth-child(1),
+    li:nth-last-child(1),
+    li:nth-last-child(2) {
+        margin-bottom: 0;
+    }
+}
+
+.page-footer__logo-mobile,
+.page-footer__logo-tablet,
+.page-footer__logo-desktop {
+    fill: $white;
+}
+
+.page-footer__logo-link:hover {
+
+    .page-footer__logo-mobile,
+    .page-footer__logo-tablet,
+    .page-footer__logo-desktop {
+        fill: $vinous;
+    }
+}
+
+.page-footer__links {
+    color: $white;
+    line-height: 19px;
+
+    &:hover {
+        color: $vinous;
+        text-decoration: underline;
+    }
+}
+
+.page-footer__social-list {
+    @include list-reset;
+    display: flex;
+    justify-content: space-between;
+    width: 143px;
+    margin-bottom: 50px;
+
+    li:nth-child(1) {
+        margin-top: 5px;
+    }
+}
+
+.page-footer__social-icon-mobile,
+.page-footer__social-icon-tablet {
+    fill: $white;
+}
+
+.page-footer__social-link,
+.page-footer__social-icon-tablet {
+    &:hover svg {
+        fill: $vinous;
+    }
+}
+
+.page-footer__social-icon-tablet {
+    display: none;
+}
+
+@media (min-width: $tablet-width) {
+    .page-footer {
+        padding-top: 45px;
+        min-height: 114px;
+    }
+
+    .page-footer__wrapper {
+        display: flex;
+        width: $tablet-content;
+        justify-content: space-between;
+    }
+
+    .page-footer__logo-mobile {
+        display: none;
+    }
+
+    .page-footer__logo-tablet {
+        display: block;
+    }
+
+    .page-footer__list {
+        justify-content: space-between;
+        align-items: center;
+        width: 535px;
+        margin-bottom: 0;
+
+        li {
+            width: fit-content;
+            margin-bottom: 0;
+        }
+
+        li:nth-child(2n) {
+            width: fit-content;
+        }
+
+        li:nth-child(1),
+        li:nth-last-child(1),
+        li:nth-last-child(2) {
+            margin-bottom: 0;
+        }
+    }
+
+    .page-footer__list-item--logo {
+        margin-right: 33px;
+    }
+
+    .page-footer__list-item--actions {
+        order: 3;
+    }
+
+    .page-footer__list-item--services {
+        order: 1;
+    }
+
+    .page-footer__list-item--trainers {
+        order: 4;
+    }
+
+    .page-footer__list-item--subscriptions {
+        order: 2;
+    }
+
+    .page-footer__list-item--timetables {
+        order: 5;
+    }
+
+    .page-footer__links {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .page-footer__social-list {
+        margin-bottom: 0;
+    }
+
+    .page-footer__social-icon-mobile {
+        display: none;
+    }
+
+    .page-footer__social-icon-tablet {
+        display: block;
+    }
+
+    .page-footer__social-list {
+        width: 100px;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .page-footer {
+        width: 100%;
+        max-width: $max-width;
+        margin: 0 auto;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .page-footer__wrapper {
+        width: 1160px;
+    }
+
+    .page-footer__logo-tablet {
+        display: none;
+    }
+
+    .page-footer__logo-desktop {
+        display: block;
+    }
+
+    .page-footer__list {
+        width: 795px;
+    }
+
+    .page-footer__list li:nth-child(1) {
+        margin-right: 238px;
+    }
+
+    .page-footer__social-list {
+        width: 108px;
+    }
+}

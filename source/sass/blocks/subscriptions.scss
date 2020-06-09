@@ -5,6 +5,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 2000;
+    overflow: hidden;
 }
 
 .subscriptions__caption {
@@ -19,7 +21,7 @@
 .subscriptions__months-list {
     @include list-reset;
     margin-bottom: 34px;
-    
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -41,12 +43,17 @@
 .subscriptions__month-item {
     padding-bottom: 11px;
     color: rgba(16, 38, 84, 0.5);
+    cursor: pointer;
+
+    &:hover {
+        color: $dark-blue;
+    }
 }
 
 .subscriptions__month-item--selected {
-    border-bottom: 2px solid rgb(209, 10, 66);
+    border-bottom: 2px solid $vinous;
     padding-bottom: 11px;
-    color: $text-color;
+    color: $dark-blue;
 }
 
 .subscriptions__card {
@@ -76,17 +83,23 @@
         color: rgb(232, 232, 232);
         opacity: 0.48;
     }
+
+    &:hover {
+        border: 8px solid transparent;
+        border-image: linear-gradient(111.72deg, $vinous 17.6%, $blue 95.31%);
+        border-image-slice: 1;
+
+        .subscriptions__button {
+            color: $white;
+            border: 2px solid $white;
+            background: linear-gradient(111.72deg, rgb(237, 2, 51) 17.6%, $blue 95.31%)
+        }
+    }
 }
 
-.subscriptions__card--selected {
-    border: 8px solid transparent;
-    border-image: linear-gradient(111.72deg, #B80027 17.6%, #1b3261 95.31%);
-    border-image-slice: 1;
-}
 
 .subscriptions__card--coach::before {
-    content: "1500";
-
+    content: "5000";
 }
 
 .subscriptions__card--day::before {
@@ -128,20 +141,152 @@
 }
 
 .subscriptions__ruble {
-    color: $text-color;
+    color: $dark-blue;
 }
 
 .subscriptions__button {
-    border: 2px solid $text-color;
+    border: 2px solid $dark-blue;
     padding: 25px 44px;
     font-size: 12px;
     line-height: 14px;
     letter-spacing: 0.05em;
 }
 
-.subscriptions__button:hover,
-.subscriptions__button--selected {
-    color: $white;
-    border: 2px solid $white;
-    background: linear-gradient(111.72deg, #ED0233 17.6%, #003EB7 95.31%)
+@media (min-width: $tablet-width) {
+    .subscriptions {
+        padding-top: 97px;
+        padding-bottom: 118px;
+        position: relative;
+        background-image: linear-gradient(to bottom,
+                rgb(248, 249, 252) 97%, $white 97%);
+    }
+
+    .subscriptions__caption {
+        font-size: 42px;
+        line-height: 42px;
+        margin-bottom: 32px;
+    }
+
+    .subscriptions__months-list {
+        width: 333px;
+        margin-bottom: 45px;
+    }
+
+    .subscriptions__month-item {
+        font-size: 18px;
+        line-height: 27px;
+    }
+
+    .subscriptions__card {
+        padding-top: 54px;
+        width: 442px;
+        min-height: 448px;
+        margin-bottom: 39px;
+
+        &::before {
+            font-size: 100px;
+            line-height: 150px;
+            top: 126px;
+        }
+
+        &:nth-last-child(1)::after {
+            @include pseudo;
+            bottom: -185px;
+            left: 316px;
+            width: 289px;
+            height: 350px;
+            transform: rotate(150deg);
+            background-image: url("../img/disks@1x-tablet.png");
+            background-repeat: no-repeat;
+            background-size: 289px auto;
+            z-index: -1000;
+
+            @media (min-resolution: $retina-dpi),
+            (min-resolution: $retina-dppx) {
+                background-image: url("../img/disks@2x-tablet.png");
+                background-size: 289px auto;
+            }
+        }
+    }
+
+    .subscriptions__months-list::before {
+        width: 331px;
+    }
+
+    .subscriptions__type {
+        font-size: 26px;
+        line-height: 29px;
+    }
+
+    .subscriptions__price {
+        font-size: 60px;
+        line-height: 90px;
+        margin-bottom: 34px;
+    }
+
+    .subscriptions__duration {
+        margin-bottom: 65px;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .subscriptions {
+        min-width: $desktop-width;
+        max-width: $max-width;
+        margin: 0 auto;
+        padding-top: 117px;
+        padding-bottom: 190px;
+        background-image: linear-gradient(to bottom,
+                rgb(248, 249, 252) 92%, $white 92%);
+    }
+
+    .subscriptions__caption {
+        font-size: 49px;
+        line-height: 49px;
+        margin-bottom: 37px;
+    }
+
+    .subscriptions__months-list {
+        width: 342px;
+        margin-bottom: 38px;
+    }
+
+    .subscriptions__month-item {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .subscriptions__cards-wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: $desktop-width;
+        padding: 0 $desktop-padding;
+    }
+
+    .subscriptions__card {
+        width: 360px;
+        margin-bottom: 0;
+
+        &:nth-last-child(1)::after {
+            width: 323px;
+            height: 386px;
+            top: 270px;
+            left: 247px;
+            transform: rotate(150deg);
+            background-image: url(../img/disks@1x-desktop.png);
+            background-repeat: no-repeat;
+            background-size: 323px auto;
+
+            @media (min-resolution: $retina-dpi),
+            (min-resolution: $retina-dppx) {
+                background-image: url("../img/disks@2x-desktop.png");
+                background-size: 323px auto;
+            }
+        }
+    }
+
+    .subscriptions__months-list::before {
+        width: 340px;
+    }
 }

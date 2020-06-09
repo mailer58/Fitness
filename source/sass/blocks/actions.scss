@@ -1,0 +1,251 @@
+.actions {
+    padding-top: 68px;
+}
+
+.actions__caption {
+    font-family: $bebas;
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    margin: 0;
+    margin-bottom: 44px;
+    text-align: center;
+}
+
+.actions__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 290px;
+    background-color: rgb(237, 2, 51);
+    padding-top: 33px;
+    padding-bottom: 345px;
+    margin: 0 auto;
+    margin-bottom: 29px;
+    background-image: url("../img/sportswoman@1x-mobile.jpg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+.actions__period {
+    color: $white;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 44px;
+    margin: 0;
+}
+
+.actions__price {
+    color: $white;
+    font-size: 70px;
+    line-height: 57px;
+    margin: 0;
+    margin-bottom: 22px;
+}
+
+.actions__description {
+    text-align: center;
+    color: $white;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 25px;
+    width: 200px;
+    margin: 0;
+    margin-bottom: 31px;
+}
+
+.actions__details {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: $white;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: underline;
+
+    &:hover {
+        color: $dark-blue;
+    }
+}
+
+.actions__image {
+    display: block;
+}
+
+.actions__gradient-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 290px;
+    border: 8px solid transparent;
+    border-image: linear-gradient(111.72deg, $vinous 0%,
+            rgb(0, 53, 159) 100%);
+    border-image-slice: 1;
+    margin: 0 auto;
+    margin-bottom: 29px;
+    padding-top: 34px;
+    padding-bottom: 40px;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.actions__card-title {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 26px;
+    color: rgb(28, 51, 116);
+    margin: 0;
+    margin-bottom: 11px;
+}
+
+.actions__card-description {
+    line-height: 22px;
+    color: rgb(28, 51, 116);
+    width: 200px;
+    margin: 0;
+    margin-bottom: 27px;
+    text-align: center;
+}
+
+.actions__card-description--command {
+    width: 166px;
+}
+
+.actions__card-details {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: rgb(28, 51, 116);
+
+    &:hover {
+        color: $vinous;
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .actions {
+        padding-top: 97px;
+    }
+
+    .actions__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: $tablet-content;
+        padding-left: 44px;
+        background-image: url("../img/sportswoman@1x-tablet.jpg");
+        background-position: right top;
+        min-height: 462px;
+        padding-bottom: 0;
+    }
+
+    .actions__caption {
+        font-size: 42px;
+        line-height: 42px;
+        margin-bottom: 42px;
+    }
+
+    .actions__price {
+        margin-bottom: 26px;
+    }
+
+    .actions__period {
+        font-size: 28px;
+        line-height: 44px;
+    }
+
+    .actions__description {
+        text-align: left;
+        margin-bottom: 190px;
+    }
+
+    .action__main-gradient-wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: $tablet-content;
+    }
+
+    .actions__gradient-wrapper {
+        align-items: flex-start;
+        width: 324px;
+        min-height: 211px;
+        margin: 0;
+        margin-bottom: 0;
+        padding-left: 26px;
+        padding-top: 24px;
+        padding-bottom: 0;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    .actions__card-description {
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .actions__card-description--command {
+        width: 256px;
+        margin-bottom: 72px;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .actions {
+        padding-top: 117px;
+    }
+
+    .actions__caption {
+        font-size: 49px;
+        line-height: 49px;
+        margin-bottom: 53px;
+    }
+
+    .actions__main-wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 1160px;
+        margin: 0 auto;
+    }
+
+    .actions__wrapper {
+        margin-bottom: 0;
+        width: 627px;
+        background-image: url("../img/sportswoman@1x-desktop.jpg");
+        @media (min-resolution: $retina-dpi),
+        (min-resolution: $retina-dppx) {
+            background-image: url("../img/sportswoman@2x-desktop.jpg");
+            background-size: 280px auto;
+        }
+    }
+
+    .action__main-gradient-wrapper {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .actions__gradient-wrapper{
+        width: 559px;
+    }
+
+    .actions__card-title {
+        margin-bottom: 9px;
+    }
+
+    .actions__card-description {
+        width: 303px;
+        margin-bottom: 71px;
+    }
+
+    .actions__card-description--command {
+        margin-bottom: 72px;
+    }
+}
