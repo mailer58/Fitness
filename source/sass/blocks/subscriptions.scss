@@ -177,22 +177,13 @@
         line-height: 27px;
     }
 
-    .subscriptions__card {
-        padding-top: 54px;
-        width: 442px;
-        min-height: 448px;
-        margin-bottom: 39px;
+    .subscriptions__cards-wrapper {
+        position: relative;
 
         &::before {
-            font-size: 100px;
-            line-height: 150px;
-            top: 126px;
-        }
-
-        &:nth-last-child(1)::after {
             @include pseudo;
-            bottom: -185px;
-            left: 316px;
+            bottom: -138px;
+            right: -171px;
             width: 289px;
             height: 350px;
             transform: rotate(150deg);
@@ -207,6 +198,20 @@
                 background-size: 289px auto;
             }
         }
+    }
+
+    .subscriptions__card {
+        padding-top: 54px;
+        width: 442px;
+        min-height: 448px;
+        margin-bottom: 39px;
+
+        &::before {
+            font-size: 100px;
+            line-height: 150px;
+            top: 126px;
+        }
+
     }
 
     .subscriptions__months-list::before {
@@ -262,17 +267,12 @@
         margin: 0 auto;
         width: $desktop-width;
         padding: 0 $desktop-padding;
-    }
 
-    .subscriptions__card {
-        width: 360px;
-        margin-bottom: 0;
-
-        &:nth-last-child(1)::after {
+        &::before {
             width: 323px;
             height: 386px;
-            top: 270px;
-            left: 247px;
+            bottom: -216px;
+            right: -193px;
             transform: rotate(150deg);
             background-image: url(../img/disks@1x-desktop.png);
             background-repeat: no-repeat;
@@ -284,6 +284,11 @@
                 background-size: 323px auto;
             }
         }
+    }
+
+    .subscriptions__card {
+        width: 360px;
+        margin-bottom: 0;
     }
 
     .subscriptions__months-list::before {
