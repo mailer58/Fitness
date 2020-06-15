@@ -37,8 +37,6 @@
 }
 
 .info__picture-wrapper {
-    display: flex;
-    align-items: flex-end;
     position: relative;
     min-height: 520px;
     margin-bottom: 34px;
@@ -54,7 +52,10 @@
 }
 
 .info__video-wrapper {
-    position: relative;
+    position: absolute;
+    top: 353px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 320px;
     height: 167px;
     margin: 0 auto;
@@ -156,12 +157,13 @@
         }
     }
 
-    .info__video-wrapper,
     .info__video {
         width: 266px;
     }
 
     .info__video-wrapper {
+        width: 266px;
+        top: 261px;
         background:
             url("../img/play-triangle.svg") no-repeat,
             url("../img/playButton@1x-mobile.png") no-repeat,
@@ -232,7 +234,8 @@
     }
 
     .info__video-wrapper {
-        position: relative;
+        top: 0;
+        left: 39px;
         width: 364px;
         height: 228px;
         margin: 0 auto;
