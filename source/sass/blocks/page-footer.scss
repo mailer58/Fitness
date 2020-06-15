@@ -201,6 +201,7 @@
 
     .page-footer__list {
         width: 795px;
+        flex-wrap: nowrap;
     }
 
     .page-footer__list li:nth-child(1) {

@@ -87,6 +87,7 @@
 @media (min-width: $desktop-width) {
     .contacts {
         width: 600px;
+        padding-bottom: 0;
     }
 
     .contacts__caption-wrapper {
