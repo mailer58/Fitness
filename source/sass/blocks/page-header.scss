@@ -1,9 +1,11 @@
 .page-header {
     background-image: url("../img/gradient@1x-mobile.jpg");
+    background-color: vinous;
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
     height: 491px;
+    flex: 1 0 auto;
 }
 
 .page-header__container {
@@ -202,6 +204,11 @@
         background-image: url("../img/gradient@1x-desktop.jpg");
         background-size: $max-width 658px;
         height: 658px;
+        margin: 0 auto;
+        width: 100%;
+        min-width: $desktop-width;
+        max-width: $max-width;
+        padding-bottom: 96px;
     }
 
     .page-header__container {
@@ -215,7 +222,7 @@
     }
 
     .page-header__inferior-wrapper {
-        padding-bottom: 116px;
+        padding-bottom: 52px;
         width: 1141px;
         margin: 0 auto;
         background-image: url("../img/sportsman@1x-desktop.jpg");

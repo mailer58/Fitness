@@ -177,6 +177,12 @@
         margin: 0 auto;
         background-image: url("../img/swimmer@1x-desktop.jpg");
         background-position: right 49px;
+
+        @media (min-resolution: $retina-dpi),
+        (min-resolution: $retina-dppx) {
+            background-image: url("../img/swimmer@2x-desktop.jpg");
+            background-size: 660px auto;
+        }
     }
 
     .competition__caption {

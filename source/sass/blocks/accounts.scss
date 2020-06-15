@@ -3,13 +3,30 @@
     padding-bottom: 70px;
 }
 
-.accounts__wrapper {
-    position: relative;
+.accounts__slider {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 293px;
+    width: 290px;
     margin: 0 auto;
+}
+
+.accounts__slider-window {
+    width: 226px;
+    min-height: 335px;
+    overflow: hidden;
+    position: relative;
+}
+
+.accounts__sequence {
+    display: flex;
+    justify-content: flex-start;
+    position: absolute;
+    width: 452px;
+    min-height: 335px;
+    left: 0;
+    top: 0; 
+    transition: left 0.2s ease-in;
 }
 
 .accounts__caption {
@@ -29,7 +46,7 @@
     align-items: center;
     width: 226px;
     min-height: 335px;
-    background: rgb(28, 51, 116);
+    background-color: rgb(28, 51, 116);
     box-shadow: 0px 0px 40px rgba(28, 51, 116, 0.2);
     margin: 0 auto;
     padding-top: 46px;
@@ -51,6 +68,10 @@
     }
 }
 
+.accounts__card--red {
+    background-color: red;
+}
+
 .accounts__user-name {
     font-weight: 700;
     font-size: 20px;
@@ -70,26 +91,31 @@
     margin: 0;
 }
 
-.accounts__left-arrow-mobile,
-.accounts__right-arrow-mobile,
-.accounts__left-arrow-tablet,
-.accounts__right-arrow-tablet {
+.accounts__prev-arrow-mobile,
+.accounts__next-arrow-mobile,
+.accounts__prev-arrow-tablet,
+.accounts__next-arrow-tablet {
     stroke: rgb(175, 175, 175);
 }
 
-.accounts__left-arrow-tablet,
-.accounts__right-arrow-tablet {
+.accounts__prev-arrow-tablet,
+.accounts__next-arrow-tablet {
     display: none;
 }
 
-.accounts__right-arrow-btn {
+.accounts__next-arrow-btn {
     top: 156px;
     right: 18px;
 }
 
-.accounts__left-arrow-btn {
+.accounts__prev-arrow-btn {
     top: 156px;
     left: 6px;
+}
+
+.accounts__next-arrow-btn,
+.accounts__prev-arrow-btn {
+    z-index: 3000;
 }
 
 @media (min-width: $tablet-width) {
@@ -98,17 +124,22 @@
         padding-bottom: 101px;
     }
 
-    .accounts__wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: $tablet-content;
-        margin: 0 auto;
-    }
-
     .accounts__caption {
         font-size: 42px;
         line-height: 42px;
+    }
+
+    .accounts__slider {
+        width: 683px;
+    } 
+
+    .accounts__slider-window {
+        width: 566px;
+        min-height: 242px;
+    }
+
+    .accounts__sequence {
+        width: 1132px;
     }
 
     .accounts__card {
@@ -142,22 +173,22 @@
         width: 330px;
     }
 
-    .accounts__left-arrow-mobile,
-    .accounts__right-arrow-mobile {
+    .accounts__prev-arrow-mobile,
+    .accounts__next-arrow-mobile {
         display: none;
     }
 
-    .accounts__left-arrow-tablet,
-    .accounts__right-arrow-tablet {
+    .accounts__prev-arrow-tablet,
+    .accounts__next-arrow-tablet {
         display: block;
     }
 
-    .accounts__left-arrow-btn {
+    .accounts__prev-arrow-btn {
         top: 105px;
         left: -9px;
     }
 
-    .accounts__right-arrow-btn {
+    .accounts__next-arrow-btn {
         top: 105px;
         right: 7px;
     }
@@ -173,5 +204,9 @@
         font-size: 49px;
         line-height: 49px;
         margin-bottom: 54px;
+    }
+
+    .accounts__slider {
+        width: 674px;
     }
 }

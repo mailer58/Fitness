@@ -102,8 +102,34 @@
     content: "5000";
 }
 
-.subscriptions__card--day::before {
-    content: "1700";
+.subscriptions__card--coach-6 {
+    &::before {
+        content: "25000";
+    }
+}
+
+.subscriptions__card--coach-12 {
+    &::before {
+        content: "55000";
+    }
+}
+
+.subscriptions__card--day {
+    &::before {
+        content: "1700";
+    }
+}
+
+.subscriptions__card--day-6 {
+    &::before {
+        content: "8500";
+    }
+}
+
+.subscriptions__card--day-12 {
+    &::before {
+        content: "18700";
+    }
 }
 
 .subscriptions__card--full-day {
@@ -111,6 +137,20 @@
 
     &::before {
         content: "2700";
+    }
+}
+
+.subscriptions__card--full-day-6 {
+
+    &::before {
+        content: "13500";
+    }
+}
+
+.subscriptions__card--full-day-12 {
+
+    &::before {
+        content: "29700";
     }
 }
 
@@ -150,6 +190,7 @@
     font-size: 12px;
     line-height: 14px;
     letter-spacing: 0.05em;
+    color: $dark-blue;
 }
 
 @media (min-width: $tablet-width) {

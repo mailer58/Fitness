@@ -184,6 +184,7 @@
         margin: 0 auto;
         background-size: 100% 100%;
         background-repeat: no-repeat;
+        flex-shrink: 0;
     }
 
     .page-footer__wrapper {

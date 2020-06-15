@@ -1,0 +1,27 @@
+@keyframes translateLeft {
+    0%, 100% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-452px);
+    }
+}
+
+@keyframes translateRight {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(226px);
+    }
+}
+
+@mixin slideLeft {
+    @include translateLeft;
+}
+
+@mixin slideRight {
+    @include translateRight;
+}

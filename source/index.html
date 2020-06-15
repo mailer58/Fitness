@@ -79,14 +79,14 @@
         <section class="subscriptions">
             <h2 class="subscriptions__caption">Абонементы</h2>
             <ul class="subscriptions__months-list">
-                <li class="subscriptions__month-item subscriptions__month-item--selected">1 месяц</li>
-                <li class="subscriptions__month-item">6 месяцев</li>
-                <li class="subscriptions__month-item">12 месяцев</li>
+                <li class="subscriptions__month-item subscriptions__month-item--selected" data-months="1">1 месяц</li>
+                <li class="subscriptions__month-item" data-months="6">6 месяцев</li>
+                <li class="subscriptions__month-item" data-months="12">12 месяцев</li>
             </ul>
             <div class="subscriptions__cards-wrapper">
                 <div class="subscriptions__card subscriptions__card--coach">
                     <h2 class="subscriptions__type">С тренером</h2>
-                    <h3 class="subscriptions__duration">12 занятий</h3>
+                    <h3 class="subscriptions__duration subscriptions__duration--coach"><span class="subscriptions__lessons-number">12</span> занятий</h3>
                     <p class="subscriptions__price">5000 <span class="subscriptions__ruble">&#8381;</span></p>
                     <a href="#" class="subscriptions__button button-templet">Купить абонемент</a>
                 </div>
@@ -127,82 +127,6 @@
         </section>
         <section class="trainers">
             <h2 class="trainers__caption">Тренеры</h2>
-            <div class="trainers__main-wrapper">
-                <button class="trainers__left-arrow-btn arrow-templet" type="button">
-                    <svg class="trainers__left-arrow-mobile" width="12" height="21">
-                        <use xlink:href="#icon-arrowLeftMobile" fill="none"></use>
-                    </svg>
-                    <svg class="trainers__left-arrow-tablet" width="18" height="34">
-                        <use xlink:href="#icon-arrowLeftTablet" fill="none"></use>
-                    </svg>
-                </button>
-                <div class="trainers__sequence">
-                    <div class="trainers__trainer trainers__trainer--1">
-                        <div class="trainers__info-wrapper">
-                            <h2 class="trainers__name">Александр Пашков</h2>
-                            <h3 class="trainers__discipline">CrossFit</h3>
-                            <ul class="trainers__info-list">
-                                <li class="trainers__info-item">
-                                    Certified Level 3 Trainer</li>
-                                <li class="trainers__info-item">
-                                    Победитель чемпионата России по CrossFit</li>
-                                <li class="trainers__info-item">
-                                    Опыт — 6 лет</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="trainers__trainer trainers__trainer--2">
-                        <div class="trainers__info-wrapper">
-                            <h2 class="trainers__name">Мария Кетова</h2>
-                            <h3 class="trainers__discipline">CrossFit</h3>
-                            <ul class="trainers__info-list">
-                                <li class="trainers__info-item">
-                                    Certified Level 3 Trainer</li>
-                                <li class="trainers__info-item">
-                                    Победитель чемпионата России по CrossFit</li>
-                                <li class="trainers__info-item">
-                                    Опыт — 6 лет</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="trainers__trainer trainers__trainer--3">
-                        <div class="trainers__info-wrapper">
-                            <h2 class="trainers__name">Алексей Лавров</h2>
-                            <h3 class="trainers__discipline">CrossFit</h3>
-                            <ul class="trainers__info-list">
-                                <li class="trainers__info-item">
-                                    Certified Level 3 Trainer</li>
-                                <li class="trainers__info-item">
-                                    Победитель чемпионата России по CrossFit</li>
-                                <li class="trainers__info-item">
-                                    Опыт — 6 лет</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="trainers__trainer trainers__trainer--4">
-                        <div class="trainers__info-wrapper">
-                            <h2 class="trainers__name">Анна Павлова</h2>
-                            <h3 class="trainers__discipline">CrossFit</h3>
-                            <ul class="trainers__info-list">
-                                <li class="trainers__info-item">
-                                    Certified Level 3 Trainer</li>
-                                <li class="trainers__info-item">
-                                    Победитель чемпионата России по CrossFit</li>
-                                <li class="trainers__info-item">
-                                    Опыт — 6 лет</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <button class="trainers__right-arrow-btn arrow-templet" type="button">
-                    <svg class="trainers__right-arrow-mobile" width="12" height="21">
-                        <use xlink:href="#icon-arrowRightMobile" fill="none"></use>
-                    </svg>
-                    <svg class="trainers__right-arrow-tablet" width="18" height="34">
-                        <use xlink:href="#icon-arrowRightTablet" fill="none"></use>
-                    </svg>
-                </button>
-            </div>
         </section>
         <section class="advantages">
             <h2 class="advantages__caption">Наши преимущества</h2>
@@ -294,7 +218,7 @@
                     <p class="actions__description">Безлимитный абонемент в тренажерный зал</p>
                     <a href="#" class="actions__details">Подробнее</a>
                 </div>
-                <div class="action__main-gradient-wrapper">
+                <div class="actions__main-gradient-wrapper">
                     <div class="actions__gradient-wrapper">
                         <h2 class="actions__card-title">Месяц бесплатно</h2>
                         <p class="actions__card-description">Приведи друга, получи абонемент в подарок</p>
@@ -312,30 +236,6 @@
         </section>
         <section class="accounts">
             <h2 class="accounts__caption">Отзывы</h2>
-            <div class="accounts__wrapper">
-                <button class="accounts__left-arrow-btn arrow-templet" type="button">
-                    <svg class="accounts__left-arrow-mobile" width="12" height="21">
-                        <use xlink:href="#icon-arrowLeftMobile" fill="none"></use>
-                    </svg>
-                    <svg class="accounts__left-arrow-tablet" width="18" height="34">
-                        <use xlink:href="#icon-arrowLeftTablet" fill="none"></use>
-                    </svg>
-                </button>
-                <div class="accounts__card">
-                    <h3 class="accounts__user-name">Анна Орлова</h3>
-                    <p class="accounts__account">«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто,
-                        тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»
-                    </p>
-                </div>
-                <button class="accounts__right-arrow-btn arrow-templet" type="button">
-                    <svg class="accounts__right-arrow-mobile" width="12" height="21">
-                        <use xlink:href="#icon-arrowRightMobile" fill="none"></use>
-                    </svg>
-                    <svg class="accounts__right-arrow-tablet" width="18" height="34">
-                        <use xlink:href="#icon-arrowRightTablet" fill="none"></use>
-                    </svg>
-                </button>
-            </div>
         </section>
         <div class="sections-wrapper">
             <div class="sections-wrapper__subcontainer">
@@ -444,7 +344,7 @@
             </ul>
         </div>
     </footer>
-    <script src="scripts/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

@@ -36,6 +36,10 @@
     padding: 7px 0;
     width: 290px;
 
+    &:hover {
+        border-bottom: 1px solid $vinous;
+    }
+
     &::-webkit-input-placeholder {
         color: $white;
     }

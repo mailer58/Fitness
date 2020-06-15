@@ -1,5 +1,5 @@
 .actions {
-    padding-top: 68px;
+    padding-top: 65px;
 }
 
 .actions__caption {
@@ -165,7 +165,7 @@
         margin-bottom: 190px;
     }
 
-    .action__main-gradient-wrapper {
+    .actions__main-gradient-wrapper {
         display: flex;
         justify-content: space-between;
         margin: 0 auto;
@@ -227,7 +227,7 @@
         }
     }
 
-    .action__main-gradient-wrapper {
+    .actions__main-gradient-wrapper {
         flex-direction: column;
         align-items: flex-end;
     }
@@ -247,5 +247,6 @@
 
     .actions__card-description--command {
         margin-bottom: 72px;
+        width: 241px;
     }
 }
