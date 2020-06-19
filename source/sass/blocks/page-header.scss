@@ -33,9 +33,9 @@
 }
 
 .page-header__city {
-    font-family: $bebas-bold;
     font-size: 28px;
     line-height: 28px;
+    font-weight: 700;
     letter-spacing: 0.03em;
     color: $white;
     margin: 0;
@@ -45,7 +45,7 @@
 }
 
 .page-header__caption {
-    font-family: $bebas-bold;
+    font-family: $bebas;
     font-weight: 700;
     font-size: 78px;
     line-height: 78px;

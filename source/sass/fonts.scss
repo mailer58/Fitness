@@ -16,16 +16,17 @@
 
   @font-face {
     font-family: "Bebas Neue";
-    src: local("Bebas Neue"), url("../fonts/bebas_neue_bold.woff2") format("woff2"),
-    url("../fonts/bebas_neue_bold.woff") format("woff");
-    
+    src: local("Bebas Neue"), url("../fonts/bebasneue-regular-webfont.woff2") format("woff2"),
+    url("../fonts/bebasneue-regular-webfont.woff") format("woff");
+    font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
-    font-family: "Bebas Neue Bold";
+    font-family: "Bebas Neue";
     src: local("Bebas Neue"), url("../fonts/bebasneuebold-webfont.woff2") format("woff2"),
     url("../fonts/bebasneuebold-webfont.woff") format("woff");
+    font-weight: 700;
     font-style: normal;
   }
 
