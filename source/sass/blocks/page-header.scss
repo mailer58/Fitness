@@ -9,8 +9,7 @@
 }
 
 .page-header__container {
-    width: $mobile-width;
-    padding: 0 $mobile-padding;
+    width: 290px;
     margin: 0 auto;
 }
 
@@ -29,6 +28,7 @@
     padding-bottom: 116px;
     min-width: $mobile-content;
     margin: 0 auto;
+    width: 290px;
 }
 
 .page-header__inferior-container {
