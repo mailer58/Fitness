@@ -13,6 +13,8 @@ const accountsSequence = document.querySelector('.accounts__sequence');
 const accountsNextBtn = document.querySelector('.accounts__next-arrow-btn');
 const accountsPrevBtn = document.querySelector('.accounts__prev-arrow-btn');
 
+const headerCaption = document.querySelector('.page-header__caption');
+headerCaption.style.width = "220px";
 
 const DIRECTION = {
     NEXT: 'next',

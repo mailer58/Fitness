@@ -29,9 +29,6 @@
     min-width: $mobile-content;
     margin: 0 auto;
     width: 290px;
-}
-
-.page-header__inferior-container {
     position: relative;
 }
 
@@ -53,7 +50,6 @@
     font-size: 78px;
     line-height: 78px;
     color: $white;
-    //width: 220px;
     margin: 0;
     padding: 0;
     margin-bottom: 47px;
@@ -68,7 +64,7 @@
     line-height: 21px;
     color: $white;
     left: -1px;
-    top: 84px;
+    top: 193px;
 
     li {
         text-align: right;
