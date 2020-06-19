@@ -114,7 +114,8 @@
         align-items: center;
         width: 535px;
         margin-bottom: 0;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
+        -mx-flex-wrap: nowrap;
 
         li {
             width: fit-content;
