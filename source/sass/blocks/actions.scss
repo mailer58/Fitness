@@ -78,7 +78,8 @@
     flex-direction: column;
     align-items: center;
     width: 290px;
-    border: 8px solid transparent;
+    border-width: 8px;
+    border-style: solid;
     border-image: linear-gradient(111.72deg, $vinous 0%,
             rgb(0, 53, 159) 100%);
     border-image-slice: 1;
