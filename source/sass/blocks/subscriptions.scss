@@ -85,9 +85,11 @@
     }
 
     &:hover {
-        border: 8px solid transparent;
+        border-width: 8px;
+        border-style: solid;
         border-image: linear-gradient(111.72deg, $vinous 17.6%, $blue 95.31%);
         border-image-slice: 1;
+
 
         .subscriptions__button {
             color: $white;
