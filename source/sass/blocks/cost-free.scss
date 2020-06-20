@@ -72,6 +72,10 @@
     }
 }
 
+.cost-free__inputs-wrapper input {
+    border-radius: 0;
+}
+
 @media (min-width: $tablet-width) {
     .cost-free {
         padding-top: 66px;

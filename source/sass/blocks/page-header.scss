@@ -271,14 +271,15 @@
         font-size: 49px;
         line-height: 49px;
         margin: 116px 0 6px 296px;
+        letter-spacing: 0;
     }
 
     .page-header__caption {
         font-size: 109px;
         line-height: 109px;
         width: 335px;
-        margin: 0 0 62px 44px;
-        letter-spacing: 0;
+        margin: 0 0 62px 52px;
+        letter-spacing: 0.01em;
     }
 
     .page-header__list {
@@ -300,7 +301,7 @@
         @include list-reset;
         position: absolute;
         left: 1139px;
-        top: 262px;
+        top: 434px;
         font-family: $roboto-condensed;
         font-size: 12px;
         line-height: 14px;
