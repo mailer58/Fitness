@@ -70,12 +70,16 @@
 
     @media (min-resolution: $retina-dpi),
     (min-resolution: $retina-dppx) {
-        background-image:
+        background:
             url("../img/play-triangle.svg"),
             url("../img/playButton@1x-mobile.png"),
             url("../img/video-color@1x-mobile.jpg"),
             url("../img/video@2x-mobile.jpg");
-        background-size: contain auto;
+
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 9px 12px, 52px 52px, 320px auto, 320px auto;
+
     }
 
     &::before {
@@ -174,13 +178,15 @@
 
         @media (min-resolution: $retina-dpi),
         (min-resolution: $retina-dppx) {
-            background-image:
+            background:
                 url("../img/play-triangle.svg"),
                 url("../img/playButton@1x-mobile.png"),
                 url("../img/video-color@1x-tablet.jpg"),
                 url("../img/video@2x-tablet.jpg");
-            background-size: contain auto;
-            background-position: center;
+
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 9px 12px, 52px 52px, 266px auto, 266px auto;
         }
     }
 }
@@ -233,6 +239,11 @@
         background-image: none;
     }
 
+    .info__video {
+        width: 364px;
+        height: 228px;
+    }
+
     .info__video-wrapper {
         top: 0;
         left: 39px;
@@ -247,15 +258,18 @@
 
         background-position: center center;
 
-
         @media (min-resolution: $retina-dpi),
         (min-resolution: $retina-dppx) {
-            background-image:
+            background:
                 url("../img/play-triangle.svg"),
                 url("../img/playButton@1x-desktop.png"),
                 url("../img/video-color@1x-desktop.jpg"),
                 url("../img/video@2x-desktop.jpg");
-            background-size: contain auto;
+
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 9px 12px, 72px 72px, 364px auto, 364px auto;
+
         }
 
         &::before {
