@@ -138,6 +138,7 @@
     .page-header__inferior-wrapper {
         align-items: flex-start;
         margin: 0 auto;
+        min-width: 739px;
         background-image: url("../img/sportsman@1x-tablet.jpg");
         background-repeat: no-repeat;
         background-position: 384px 20px;
@@ -178,14 +179,15 @@
     .page-header__caption {
         font-size: 86px;
         line-height: 86px;
-        margin-left: 119px;
+        margin-left: 114px;
         margin-bottom: 44px;
-        width: 234px;
+        width: 240px;
+
     }
 
     .page-header__list {
         left: 30px;
-        top: 96px;
+        top: 206px;
     }
 
     .page-header__subscription {
@@ -275,13 +277,13 @@
         font-size: 109px;
         line-height: 109px;
         width: 335px;
-        margin: 0 0 62px 51px;
-        letter-spacing: 0.03em;
+        margin: 0 0 62px 44px;
+        letter-spacing: 0;
     }
 
     .page-header__list {
         left: 10px;
-        top: 132px;
+        top: 303px;
     }
 
     .page-header__logo-desktop {

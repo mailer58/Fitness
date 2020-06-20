@@ -75,7 +75,7 @@
             url("../img/playButton@1x-mobile.png"),
             url("../img/video-color@1x-mobile.jpg"),
             url("../img/video@2x-mobile.jpg");
-        background-size: 320px auto;
+        background-size: contain auto;
     }
 
     &::before {
@@ -179,7 +179,7 @@
                 url("../img/playButton@1x-mobile.png"),
                 url("../img/video-color@1x-tablet.jpg"),
                 url("../img/video@2x-tablet.jpg");
-            background-size: 266px auto;
+            background-size: contain auto;
             background-position: center;
         }
     }
@@ -255,7 +255,7 @@
                 url("../img/playButton@1x-desktop.png"),
                 url("../img/video-color@1x-desktop.jpg"),
                 url("../img/video@2x-desktop.jpg");
-            background-size: 364px auto;
+            background-size: contain auto;
         }
 
         &::before {
