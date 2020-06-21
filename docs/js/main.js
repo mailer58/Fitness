@@ -257,6 +257,8 @@
             this.sliderVisible = null;
             this._windowWidth = windowWidth;
             this._firstRender = false;
+            this._isSwipe = false;
+            this._swipeDirection = null;
 
             // параметры слайдера:
             this.PHOTOS_NUMBER = sliderFeatures.PHOTOS_NUMBER;
@@ -349,9 +351,14 @@
             let slidesNumber;
             let slideGap;
             let animationDuration;
-            let direction = evt.currentTarget;
+            let direction;
+            if (!this._isSwipe) {
+            direction = evt.currentTarget;
             direction = direction.className;
             direction = direction.indexOf(DIRECTION.NEXT) > -1 ? DIRECTION.NEXT : DIRECTION.PREV;
+            } else if (this._isSwipe) {
+                direction = this._swipeDirection;
+            }
 
             const windowWidth = document.body.clientWidth;
             if (windowWidth >= SIZES.MIN && windowWidth < SIZES.MID) {
@@ -469,6 +476,53 @@
             }
         }
 
+        onSwipe() {
+            const slider = this._sliderComponent.getElement();
+            let startX,
+                dist,
+                threshold = 50,
+                allowedTime = 500,
+                elapsedTime,
+                startTime,
+                direction;
+                
+            const handleSwipe = (isCorrectSwipe) => {
+                if (isCorrectSwipe) {
+                    console.log('ok');
+                    this._moveSlides();
+                    return;
+                }
+
+                console.log('bad swipe');
+                return;
+            }
+
+            slider.addEventListener('touchstart', (evt) => {
+                this._isSwipe = true;
+                const touchObj = evt.changedTouches[0];
+                dist = 0;
+                startX = touchObj.pageX;
+                startTime = new Date().getTime() // время контакта с поверхностью сенсора
+                evt.preventDefault();
+            });
+
+            slider.addEventListener('touchmove', (evt)=>{
+                evt.preventDefault();
+            });
+          
+            slider.addEventListener('touchend', (evt) => {
+                let touchObj = evt.changedTouches[0];
+                dist = touchObj.pageX - startX;
+                this._swipeDirection = dist > 0 ? DIRECTION.NEXT : DIRECTION.PREV;
+                elapsedTime = new Date().getTime() - startTime;
+                let swipeCorrectBol = (elapsedTime <= allowedTime && Math.abs(dist) >= threshold);
+                console.log(elapsedTime, dist);
+                handleSwipe(swipeCorrectBol);
+                this._isSwipe = false;
+                evt.preventDefault();
+            });
+        }
+
         recoveryListeners() {
             const buttons = this._sliderComponent.getElement().querySelectorAll('button');
             const prevBtn = buttons[0];
@@ -476,6 +530,8 @@
 
             prevBtn.addEventListener('click', this._moveSlides);
             nextBtn.addEventListener('click', this._moveSlides);
+
+            this.onSwipe();
         }
 
         render() {
