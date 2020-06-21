@@ -204,7 +204,7 @@
 
     const accountsMocks = [{
             name: 'Анна Орлова',
-            account: '«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»'
+            account: '«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей.»'
         },
         {
             name: 'Дарья Соколова',
@@ -779,3 +779,24 @@
     const subscriptionBtn = document.querySelector('.page-header__subscription');
     subscriptionBtn.addEventListener('click', smoothScrollToForm);
 })();
+
+
+
+// установка высоты для контейнера слайдов с отзывами:
+const accounts = document.getElementsByClassName('accounts__account');
+const sliderWindowAccounts = document.getElementsByClassName('accounts__slider-window')[0];
+
+const accountsNames = document.getElementsByClassName('accounts__user-name');
+const sliderWindowAccountsPaddingTop = 53;
+
+let biggestAccountHeight = 0;
+// поиск самого большого отзыва:
+for (let i = 0; i < accounts.length; i++) {
+    let accountSize = accounts[i].offsetHeight + accountsNames[i].offsetHeight;
+
+    biggestAccountHeight = accountSize > biggestAccountHeight ? accountSize : biggestAccountHeight;
+}
+
+// добавление к отзыву вертикальных паддингов:
+const accountHeight = sliderWindowAccountsPaddingTop * 2 + biggestAccountHeight;
+sliderWindowAccounts.style.height = accountHeight + 'px';

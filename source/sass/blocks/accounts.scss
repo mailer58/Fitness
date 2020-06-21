@@ -13,9 +13,9 @@
 
 .accounts__slider-window {
     width: 226px;
-    min-height: 335px;
     overflow: hidden;
     position: relative;
+    background-color: rgb(28, 51, 116);
 }
 
 .accounts__sequence {
@@ -135,7 +135,6 @@
 
     .accounts__slider-window {
         width: 566px;
-        min-height: 242px;
     }
 
     .accounts__sequence {
