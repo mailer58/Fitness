@@ -478,26 +478,30 @@
 
         onSwipe() {
             const slider = this._sliderComponent.getElement();
+            let sliderWindow;
+            for (const element of slider.childNodes) {
+                if (element.className) {
+                if (element.className.indexOf('slider-window') > -1) {
+                    sliderWindow = element;
+                }
+            }
+            }
             let startX,
                 dist,
                 threshold = 50,
                 allowedTime = 500,
                 elapsedTime,
-                startTime,
-                direction;
-                
+                startTime;
+
             const handleSwipe = (isCorrectSwipe) => {
                 if (isCorrectSwipe) {
-                    console.log('ok');
                     this._moveSlides();
                     return;
                 }
-
-                console.log('bad swipe');
                 return;
             }
 
-            slider.addEventListener('touchstart', (evt) => {
+            sliderWindow.addEventListener('touchstart', (evt) => {
                 this._isSwipe = true;
                 const touchObj = evt.changedTouches[0];
                 dist = 0;
@@ -506,17 +510,16 @@
                 evt.preventDefault();
             });
 
-            slider.addEventListener('touchmove', (evt)=>{
+            sliderWindow.addEventListener('touchmove', (evt)=>{
                 evt.preventDefault();
             });
           
-            slider.addEventListener('touchend', (evt) => {
+            sliderWindow.addEventListener('touchend', (evt) => {
                 let touchObj = evt.changedTouches[0];
                 dist = touchObj.pageX - startX;
-                this._swipeDirection = dist > 0 ? DIRECTION.NEXT : DIRECTION.PREV;
+                this._swipeDirection = dist > 0 ? DIRECTION.PREV : DIRECTION.NEXT;
                 elapsedTime = new Date().getTime() - startTime;
                 let swipeCorrectBol = (elapsedTime <= allowedTime && Math.abs(dist) >= threshold);
-                console.log(elapsedTime, dist);
                 handleSwipe(swipeCorrectBol);
                 this._isSwipe = false;
                 evt.preventDefault();
