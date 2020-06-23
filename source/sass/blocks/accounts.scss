@@ -23,9 +23,10 @@
     justify-content: flex-start;
     position: absolute;
     width: 452px;
-    height: fit-content;;
+    height: fit-content;
+    ;
     left: 0;
-    top: 0; 
+    top: 0;
     transition: left 0.2s ease-in;
 }
 
@@ -55,6 +56,7 @@
     &:before {
         @include pseudo;
         background-image: url("../img/orlova@1x-mobile.png");
+        background-repeat: no-repeat;
         width: 68px;
         height: 68px;
         top: 39px;
@@ -64,6 +66,7 @@
         (min-resolution: $retina-dppx) {
             background-image: url("../img/orlova@2x-mobile.png");
             background-size: 68px auto;
+            background-repeat: no-repeat;
         }
     }
 }
@@ -131,7 +134,7 @@
 
     .accounts__slider {
         width: 683px;
-    } 
+    }
 
     .accounts__slider-window {
         width: 566px;
@@ -154,7 +157,13 @@
             top: 63px;
             left: 65px;
             background-image: url("../img/orlova@1x-tablet.png");
-            background-repeat: no-repeat;
+
+            @media (min-resolution: $retina-dpi),
+            (min-resolution: $retina-dppx) {
+                background-image: url("../img/orlova@2x-tablet.png");
+                background-size: 80px auto;
+                background-repeat: no-repeat;
+            }
         }
     }
 

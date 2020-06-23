@@ -25,7 +25,7 @@
     font-family: $bebas;
     font-size: 52px;
     line-height: 52px;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.03em;
     color: $white;
     font-weight: 700;
     margin: 0;
@@ -158,6 +158,10 @@
         margin: 0;
     }
 
+    .competition__caption {
+        letter-spacing: 0.03em;
+    }
+
     .competition__container {
         width: 292px;
         margin: 0;
@@ -185,11 +189,6 @@
         }
     }
 
-    .competition__caption {
-        font-size: 90px;
-        line-height: 90px;
-    }
-
     .competition__wrapper {
         width: 500px;
         padding-top: 32px;
@@ -200,7 +199,8 @@
         margin-left: 77px;
         margin-right: 51px;
         width: 200px;
-        letter-spacing: 0.04em;
+        font-size: 90px;
+        line-height: 90px;
     }
 
     .competition__date-title,
