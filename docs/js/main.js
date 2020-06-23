@@ -89,6 +89,15 @@
         component.removeElement();
     };
 
+// установка высоты для контейнера слайдов с отзывами
+// по высоте слайдов:
+const setAccountsHeight = () => {
+    const accountsSequence = document.getElementsByClassName('accounts__sequence')[0];
+    const sliderWindowAccounts = document.getElementsByClassName('accounts__slider-window')[0]; 
+    accountsSequence.offsetHeight;
+    sliderWindowAccounts.style.height = accountsSequence.offsetHeight + 'px';
+    }
+
     // шаблон для блока тренеров:
 
     const trainersNames = ['Александр Пашков', 'Мария Кетова', 'Алексей Лавров', 'Анна Павлова', 'Иван Иванов', 'Ксения Петрова', 'Андрей Сидоров', 'Анастасия Васильева'];
@@ -212,6 +221,49 @@
         }
     ];
 
+    class AbstractComponent {
+        constructor() {
+            if (new.target === AbstractComponent) {
+                throw new Error(`Can't instantiate AbstractComponent, only concrete one.`);
+            }
+
+            this._element = null;
+        }
+
+        getTemplate() {
+            throw new Error(`Abstract method not implemented: getTemplate`);
+        }
+
+        getElement() {
+            if (!this._element) {
+                this._element = createElement(this.getTemplate());
+            }
+
+            return this._element;
+        }
+
+        removeElement() {
+            this._element = null;
+        }
+
+        recoveryListeners() {
+            throw new Error(`Abstract method not implemented: recoveryListeners`);
+        }
+
+        rerender() {
+            const oldElement = this.getElement();
+            const parent = oldElement.parentElement;
+
+            this.removeElement();
+
+            const newElement = this.getElement();
+
+            parent.replaceChild(newElement, oldElement);
+
+            this.recoveryListeners();
+        }
+    }
+
     const createAccountsTemplate = () => {
         return `<div class="accounts__slider">
     <button class="accounts__prev-arrow-btn arrow-templet" type="button">
@@ -308,6 +360,7 @@
                         this._windowWidth = windowWidth;
                         this._slideIndex = 1;
                         this.render();
+                        setAccountsHeight();
                     }
                 }
                 if (window.matchMedia('(min-width: 768px)').matches &&
@@ -317,6 +370,7 @@
                         this._windowWidth = windowWidth;
                         this._slideIndex = 1;
                         this.render();
+                        setAccountsHeight();
                     }
                 }
                 if (window.matchMedia('(min-width: 1200px)').matches) {
@@ -325,6 +379,7 @@
                         this._windowWidth = windowWidth;
                         this._slideIndex = 1;
                         this.render();
+                        setAccountsHeight();
                     }
                 }
             });
@@ -554,49 +609,6 @@
         }
     }
 
-    class AbstractComponent {
-        constructor() {
-            if (new.target === AbstractComponent) {
-                throw new Error(`Can't instantiate AbstractComponent, only concrete one.`);
-            }
-
-            this._element = null;
-        }
-
-        getTemplate() {
-            throw new Error(`Abstract method not implemented: getTemplate`);
-        }
-
-        getElement() {
-            if (!this._element) {
-                this._element = createElement(this.getTemplate());
-            }
-
-            return this._element;
-        }
-
-        removeElement() {
-            this._element = null;
-        }
-
-        recoveryListeners() {
-            throw new Error(`Abstract method not implemented: recoveryListeners`);
-        }
-
-        rerender() {
-            const oldElement = this.getElement();
-            const parent = oldElement.parentElement;
-
-            this.removeElement();
-
-            const newElement = this.getElement();
-
-            parent.replaceChild(newElement, oldElement);
-
-            this.recoveryListeners();
-        }
-    }
-
     class TrainersComponent extends AbstractComponent {
         constructor() {
             super();
@@ -733,6 +745,8 @@
         }
     }
 
+                          /* Actions */
+                          
     // удаление разметки слайдеров для IE:
     trainersWrapper.remove();
     accountsWrapper.remove();
@@ -757,7 +771,6 @@
         windowWidth = SIZES_RANGES.MAX;
     }
 
-
     // инициализация и рендер слайдеров:
     const trainersComponent = new TrainersComponent();
     const accountsComponent = new AccountsComponent();
@@ -778,25 +791,45 @@
 
     const subscriptionBtn = document.querySelector('.page-header__subscription');
     subscriptionBtn.addEventListener('click', smoothScrollToForm);
+
+    setAccountsHeight();
+
+    // инпут для телефона:
+    const phoneInput = document.querySelector('.cost-free__input--phone');
+    phoneInput.addEventListener('input', () => {
+       //phoneInput.value = phoneInput.value.replace(/[^\d]/g,'');
+    });
+
+    phoneInput.addEventListener('invalid', () => {
+        if (phoneInput.validity.valueMissing) {
+            phoneInput.setCustomValidity('Обязательное поле!');
+        } else if (phoneInput.validity.patternMismatch) {
+            phoneInput.setCustomValidity('Пожалуйста, вводите только цифры');
+        } else if (phoneInput.validity.tooShort) {
+            phoneInput.setCustomValidity('Номер телефона должен содержать минимум 7 цифр');
+        } else if (phoneInput.validity.tooLong) {
+            phoneInput.setCustomValidity('Номер телефона должен содержать не более 11 цифр');
+        } else {
+            phoneInput.setCustomValidity('');
+        }
+    });
+
+    const form = document.querySelector('.cost-free__form');
+    form.addEventListener('submit', (evt) => {
+
+        phoneInput.checkValidity();
+
+        if (phoneInput.validity.valueMissing) {
+            phoneInput.setCustomValidity('Обязательное поле!');
+            evt.preventDefault();
+        }  else if (phoneInput.validity.tooShort) {
+            phoneInput.setCustomValidity('Телефон должен содержать минимум 7 символов');
+            evt.preventDefault();
+        }
+        else {
+            phoneInput.setCustomValidity('');
+        }
+
+    })
 })();
 
-
-
-// установка высоты для контейнера слайдов с отзывами:
-const accounts = document.getElementsByClassName('accounts__account');
-const sliderWindowAccounts = document.getElementsByClassName('accounts__slider-window')[0];
-
-const accountsNames = document.getElementsByClassName('accounts__user-name');
-const sliderWindowAccountsPaddingTop = 53;
-
-let biggestAccountHeight = 0;
-// поиск самого большого отзыва:
-for (let i = 0; i < accounts.length; i++) {
-    let accountSize = accounts[i].offsetHeight + accountsNames[i].offsetHeight;
-
-    biggestAccountHeight = accountSize > biggestAccountHeight ? accountSize : biggestAccountHeight;
-}
-
-// добавление к отзыву вертикальных паддингов:
-const accountHeight = sliderWindowAccountsPaddingTop * 2 + biggestAccountHeight;
-sliderWindowAccounts.style.height = accountHeight + 'px';

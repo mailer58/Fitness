@@ -2,10 +2,9 @@
     .sections-wrapper {
         margin: 0 auto;
         width: 100%;
-        max-width: $max-width;
         background-image: linear-gradient($dark-blue 50%, $dark-blue 50%);
-        background-size: 166px 102%;
-        background-position: calc(50% - 600px) top;
+        background-size: 50% 102%;
+        background-position: 0 top;
         background-repeat: no-repeat;
         position: relative;
 

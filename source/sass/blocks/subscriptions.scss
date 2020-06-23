@@ -276,10 +276,9 @@
 @media (min-width: $desktop-width) {
     .subscriptions {
         min-width: $desktop-width;
-        max-width: $max-width;
         margin: 0 auto;
         padding-top: 117px;
-        padding-bottom: 190px;
+        padding-bottom: 191px;
         background-image: linear-gradient(to bottom,
                 rgb(248, 249, 252) 92%, $white 92%);
     }
@@ -302,10 +301,26 @@
 
     .subscriptions__cards-wrapper {
         display: flex;
-        justify-content: space-between;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
         margin: 0 auto;
+        padding: 0 20px;
         width: $desktop-width;
-        padding: 0 $desktop-padding;
+
+        div:nth-child(n) {
+            margin-right: 39px;
+        }
+    
+        div:nth-child(3n) {
+            margin-right: 0;
+        }
+    
+        div:nth-last-child(1),
+        div:nth-last-child(2),
+        div:nth-last-child(3) {
+            margin-bottom: 0;
+        }
 
         &::before {
             width: 323px;
@@ -327,7 +342,9 @@
 
     .subscriptions__card {
         width: 360px;
-        margin-bottom: 0;
+        margin-bottom: 39px;
     }
+
+
 
 }

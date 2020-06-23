@@ -200,13 +200,15 @@
 @media (min-width: $desktop-width) {
 
     .page-header {
-        background-image: url("../img/gradient@1x-desktop.jpg");
-        background-size: $max-width 658px;
+        background: url("../img/gradient@1x-desktop.jpg"),
+        url("../img/gradient@1x-desktop.jpg");
+        background-size: $max-width 658px, 100% auto;
+        background-position: center, center;
+        background-repeat: no-repeat, no-repeat;
         height: 658px;
         margin: 0 auto;
         width: 100%;
         min-width: $desktop-width;
-        max-width: $max-width;
         padding-bottom: 96px;
     }
 
@@ -279,7 +281,7 @@
         line-height: 109px;
         width: 335px;
         margin: 0 0 62px 52px;
-        letter-spacing: 0.01em;
+        letter-spacing: 0.03em;
     }
 
     .page-header__list {

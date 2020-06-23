@@ -100,7 +100,7 @@
 
 @media (min-width: $tablet-width) {
     .advantages {
-        padding-top: 95px;
+        padding-top: 98px;
         padding-bottom: 49px;
         display: flex;
         flex-direction: column;
@@ -110,7 +110,7 @@
     .advantages__caption {
         font-size: 42px;
         line-height: 42px;
-        letter-spacing: 0.02em;
+        letter-spacing: 0.03em;
         margin-bottom: 52px;
     }
 
@@ -191,14 +191,14 @@
         padding-top: 117px;
         padding-bottom: 0;
         min-height: 662px;
-        max-width: $max-width;
         margin: 0 auto;
     }
 
     .advantages__caption {
         font-size: 49px;
         line-height: 49px;
-        margin-bottom: 66px;
+        margin-bottom: 69px;
+        letter-spacing: 0.04em;
     }
 
     .advantages__main-wrapper {

@@ -66,23 +66,23 @@
             </div>
             <div class="page-header__inferior-wrapper">
                 <h2 class="page-header__city">Омск</h2>
-                    <p class="page-header__caption">Фитнес центр</p>
-                    <ul class="page-header__list">
-                        <li class="page-header__list-item">Тренажёрный зал</li>
-                        <li class="page-header__list-item">Групповые занятия</li>
-                        <li class="page-header__list-item">Кардио-зона</li>
-                    </ul>
-                    <ul class="page-header__social-list">
-                        <li class="page-header__social-item">
-                            <a href="#" class="page-header__social-link">FB</a>
-                        </li>
-                        <li class="page-header__social-item">
-                            <a href="#" class="page-header__social-link">VK</a>
-                        </li>
-                        <li class="page-header__social-item">
-                            <a href="#" class="page-header__social-link">IG</a>
-                        </li>
-                    </ul>
+                <p class="page-header__caption">Фитнес центр</p>
+                <ul class="page-header__list">
+                    <li class="page-header__list-item">Тренажёрный зал</li>
+                    <li class="page-header__list-item">Групповые занятия</li>
+                    <li class="page-header__list-item">Кардио-зона</li>
+                </ul>
+                <ul class="page-header__social-list">
+                    <li class="page-header__social-item">
+                        <a href="#" class="page-header__social-link">FB</a>
+                    </li>
+                    <li class="page-header__social-item">
+                        <a href="#" class="page-header__social-link">VK</a>
+                    </li>
+                    <li class="page-header__social-item">
+                        <a href="#" class="page-header__social-link">IG</a>
+                    </li>
+                </ul>
                 <span class="page-header__subscription button-templet">Купить абонемент</span>
             </div>
         </div>
@@ -387,14 +387,19 @@
                 <div class="actions__main-gradient-wrapper">
                     <div class="actions__gradient-wrapper">
                         <h2 class="actions__card-title">Месяц бесплатно</h2>
-                        <p class="actions__card-description">Приведи друга, получи абонемент в подарок</p>
+                        <div class="actions__card-description-wrapper">
+                            <p class="actions__card-description actions__card-description--friends">Приведи друга,
+                                получи абонемент в подарок</p>
+                        </div>
                         <a href="#" class="actions__card-details">Подробнее</a>
                     </div>
                     <div class="actions__gradient-wrapper">
                         <h2 class="actions__card-title">Скидка 20%</h2>
-                        <p class="actions__card-description actions__card-description--command">Корпоративный фитнес с
-                            командой
-                        </p>
+                        <div class="actions__card-description-wrapper">
+                            <p class="actions__card-description actions__card-description--command">Корпоративный фитнес
+                                с командой
+                            </p>
+                        </div>
                         <a href="#" class="actions__card-details">Подробнее</a>
                     </div>
                 </div>
@@ -448,7 +453,7 @@
                             <fieldset class="cost-free__fieldset">
                                 <div class="cost-free__inputs-wrapper">
                                     <input type="text" class="cost-free__input" id="name-input" placeholder="Имя" pattern="^[А-Яа-я, A-Za-z]*\s?[А-Яа-я, A-Za-z]*?\s?[А-Яа-я, A-Za-z]*?\s*?$" minlength="3" maxlength="30" required="">
-                                    <input type="tel" class="cost-free__input cost-free__input--phone" id="phone-input" placeholder="Телефон" pattern="^[1-9]\d*$" minlength="7" maxlength="11" required="">
+                                    <input type="tel" class="cost-free__input cost-free__input--phone" id="phone-input" placeholder="Телефон" pattern="^[1-9]\d*$" minlength="7" maxlength="11" title="Пожалуйста, вводите только цифры" required="">
                                 </div>
                                 <button class="cost-free__button button-templet">Отправить</button>
                             </fieldset>
@@ -479,15 +484,17 @@
     </main>
     <footer class="page-footer">
         <div class="page-footer__wrapper">
+            <a class="page-footer__logo-link page-footer__logo-link--external" href="#">
+                <svg class="page-footer__logo-desktop" width="87" height="20">
+                    <use xlink:href="#logo-desktop"></use>
+                </svg>
+                <svg class="page-footer__logo-tablet" width="80" height="18">
+                    <use xlink:href="#logo-tablet"></use>
+                </svg>
+            </a>
             <ul class="page-footer__list">
                 <li class="page-footer__list-item page-footer__list-item--logo">
                     <a class="page-footer__logo-link" href="#">
-                        <svg class="page-footer__logo-desktop" width="87" height="20">
-                            <use xlink:href="#logo-desktop"></use>
-                        </svg>
-                        <svg class="page-footer__logo-tablet" width="80" height="18">
-                            <use xlink:href="#logo-tablet"></use>
-                        </svg>
                         <svg class="page-footer__logo-mobile" width="67" height="16">
                             <use xlink:href="#logo-mobile"></use>
                         </svg>

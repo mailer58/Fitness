@@ -401,6 +401,21 @@ if (internetExplorer) {
     accountsPrevBtn.addEventListener('click', moveAccountsSlides);
     accountsNextBtn.addEventListener('click', moveAccountsSlides);
 
+    const footerList = document.querySelector('.page-footer__list');
+    if (window.matchMedia('(min-width: 768px)').matches) {
+        footerList.style.flexWrap = 'nowrap';
+    }
+
+    window.addEventListener('resize', function () {
+        if (window.matchMedia('(min-width: 320px)').matches &&
+            (window.matchMedia('(max-width: 767px)').matches)) {
+            footerList.style.flexWrap = 'wrap';
+        }
+        if (window.matchMedia('(min-width: 768px)').matches) {
+            footerList.style.flexWrap = 'nowrap';
+        }
+    });
+
     // обработка кликов по табам:
     subscriptionsList.addEventListener('click', changeSubscription);
 

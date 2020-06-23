@@ -65,11 +65,17 @@
     @include list-reset;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 143px;
-    margin-bottom: 50px;
+    flex-wrap: wrap;
 
-    li:nth-child(1) {
-        margin-top: 5px;
+    li {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    li:nth-child(3) {
+        margin-right: 0;
     }
 }
 
@@ -89,6 +95,14 @@
     display: none;
 }
 
+.page-footer__list-item--logo {
+    display: block;
+}
+
+.page-footer__logo-link--external {
+    display: none;
+}
+
 @media (min-width: $tablet-width) {
     .page-footer {
         padding-top: 45px;
@@ -99,6 +113,15 @@
         display: flex;
         width: $tablet-content;
         justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .page-footer__logo-link--external {
+        display: block;
+    }
+
+    .page-footer__logo-link {
+        margin-top: 2px;
     }
 
     .page-footer__logo-mobile {
@@ -110,15 +133,22 @@
     }
 
     .page-footer__list {
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
-        width: 535px;
+        width: 397px;
         margin-bottom: 0;
-        flex-wrap: nowrap;
+        margin-left: 27px;
+        flex-wrap: wrap;
 
         li {
             width: fit-content;
             margin-bottom: 0;
+            margin-right: 31px;
+        }
+
+        
+        li:last-child {
+            margin-right: 0;
         }
 
         li:nth-child(2n) {
@@ -133,7 +163,7 @@
     }
 
     .page-footer__list-item--logo {
-        margin-right: 33px;
+        display: none;
     }
 
     .page-footer__list-item--actions {
@@ -181,8 +211,8 @@
 @media (min-width: $desktop-width) {
     .page-footer {
         width: 100%;
-        max-width: $max-width;
         margin: 0 auto;
+        padding-top: 42px;
         background-size: 100% 100%;
         background-repeat: no-repeat;
         flex-shrink: 0;
@@ -190,6 +220,12 @@
 
     .page-footer__wrapper {
         width: 1160px;
+        align-items: flex-start;
+    }
+
+    .page-footer__logo-link {
+        margin-right: 0;
+        margin-top: 3px;
     }
 
     .page-footer__logo-tablet {
@@ -201,14 +237,24 @@
     }
 
     .page-footer__list {
-        width: 795px;
+        width: 542px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-left: 132px;
+
+        li {
+            margin-right: 40px;
+        }
+
+        li:last-child {
+            margin-right: 0;
+        }
+
     }
 
-    .page-footer__list li:nth-child(1) {
-        margin-right: 238px;
-    }
 
     .page-footer__social-list {
         width: 108px;
+
     }
 }

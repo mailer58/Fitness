@@ -1,5 +1,5 @@
 .actions {
-    padding-top: 65px;
+    padding-top: 70px;
 }
 
 .actions__caption {
@@ -42,6 +42,13 @@
     line-height: 57px;
     margin: 0;
     margin-bottom: 22px;
+}
+
+.actions__card-description-wrapper {
+    height: 47px;
+    margin-bottom: 25px;
+    padding-right: 15px;
+    overflow: auto;
 }
 
 .actions__description {
@@ -99,7 +106,7 @@
     line-height: 26px;
     color: rgb(28, 51, 116);
     margin: 0;
-    margin-bottom: 11px;
+    margin-bottom: 12px;
 }
 
 .actions__card-description {
@@ -107,7 +114,6 @@
     color: rgb(28, 51, 116);
     width: 200px;
     margin: 0;
-    margin-bottom: 27px;
     text-align: center;
 }
 
@@ -161,6 +167,10 @@
         line-height: 44px;
     }
 
+    .actions__card-description-wrapper {
+        margin-bottom: 48px;
+    }
+
     .actions__description {
         text-align: left;
         margin-bottom: 190px;
@@ -176,7 +186,7 @@
     .actions__gradient-wrapper {
         align-items: flex-start;
         width: 324px;
-        min-height: 211px;
+        min-height: 214px;
         margin: 0;
         margin-bottom: 0;
         padding-left: 26px;
@@ -189,14 +199,12 @@
     }
 
     .actions__card-description {
-        margin-bottom: 50px;
         text-align: left;
         width: 154px;
     }
 
     .actions__card-description--command {
         width: 256px;
-        margin-bottom: 72px;
     }
 }
 
@@ -208,7 +216,7 @@
     .actions__caption {
         font-size: 49px;
         line-height: 49px;
-        margin-bottom: 53px;
+        margin-bottom: 56px;
     }
 
     .actions__main-wrapper {
@@ -222,6 +230,7 @@
         margin-bottom: 0;
         width: 627px;
         background-image: url("../img/sportswoman@1x-desktop.jpg");
+
         @media (min-resolution: $retina-dpi),
         (min-resolution: $retina-dppx) {
             background-image: url("../img/sportswoman@2x-desktop.jpg");
@@ -234,7 +243,7 @@
         align-items: flex-end;
     }
 
-    .actions__gradient-wrapper{
+    .actions__gradient-wrapper {
         width: 559px;
     }
 
@@ -242,13 +251,14 @@
         margin-bottom: 9px;
     }
 
-    .actions__card-description {
-        width: 303px;
-        margin-bottom: 71px;
+    .actions__card-description-wrapper {
+        height: 70px;
+        margin-bottom: 25px;
+        padding-right: 15px;
     }
 
-    .actions__card-description--command {
-        margin-bottom: 72px;
-        width: 241px;
+    .actions__card-description {
+        width: 482px;
     }
+
 }

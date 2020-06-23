@@ -47,8 +47,8 @@
 
 @media (min-width: $tablet-width) {
     .contacts {
-        padding-top: 67px;
-        padding-bottom: 44px;
+        padding-top: 66px;
+        padding-bottom: 41px;
     }
 
     .contacts__wrapper {
@@ -73,7 +73,7 @@
     .contacts__caption {
         font-size: 42px;
         line-height: 42px;
-        letter-spacing: 0;
+        letter-spacing: 0.03em;
         width: 500px;
         margin: 0 auto;
         margin-bottom: 36px;
@@ -81,6 +81,10 @@
 
     .contacts__subcontainer--left {
         margin-right: 96px;
+    }
+
+    .contacts__data {
+        margin-bottom: 21px;
     }
 }
 
