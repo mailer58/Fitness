@@ -838,7 +838,7 @@ const setAccountsHeight = () => {
 	const safari = /safari/.test(userAgent);
     if (safari) {
         const featuresList = document.querySelector('.page-header__list');
-        featuresList.style.left = '-' + 8 + 'px';
+        featuresList.style.left = '-' + 20 + 'px';
     }
 })();
 
