@@ -839,16 +839,10 @@ const setAccountsHeight = () => {
     if (safari) {
         const featuresList = document.querySelector('.page-header__list');
 
-        window.addEventListener('resize', () => {
-            if (window.matchMedia('(min-width: 320px)').matches &&
-                (window.matchMedia('(max-width: 767px)').matches)) {
-                featuresList.style.left = '-' + 20 + 'px';
-            } else if (window.matchMedia('(min-width: 768px)').matches) {
-                featuresList.style.left = 30 + 'px';
-            } else if (window.matchMedia('(min-width: 1200px)').matches) {
-                featuresList.style.left = 10 + 'px';
-            }
-        });
+        if (window.matchMedia('(min-width: 320px)').matches &&
+            (window.matchMedia('(max-width: 767px)').matches)) {
+            featuresList.style.left = '-' + 20 + 'px';
+        }
     }
 })();
 
