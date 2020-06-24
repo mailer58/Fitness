@@ -835,10 +835,20 @@ const setAccountsHeight = () => {
     // позиционирование списка для Safari:
     const userAgent = navigator.userAgent.toLowerCase();
 
-	const safari = /safari/.test(userAgent);
+    const safari = /safari/.test(userAgent);
     if (safari) {
         const featuresList = document.querySelector('.page-header__list');
-        featuresList.style.left = '-' + 20 + 'px';
+
+        window.addEventListener('resize', () => {
+            if (window.matchMedia('(min-width: 320px)').matches &&
+                (window.matchMedia('(max-width: 767px)').matches)) {
+                featuresList.style.left = '-' + 20 + 'px';
+            } else if (window.matchMedia('(min-width: 768px)').matches) {
+                featuresList.style.left = 30 + 'px';
+            } else if (window.matchMedia('(min-width: 1200px)').matches) {
+                featuresList.style.left = 10 + 'px';
+            }
+        });
     }
 })();
 
