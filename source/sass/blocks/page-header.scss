@@ -198,13 +198,15 @@
 
 
 @media (min-width: $desktop-width) {
-
     .page-header {
-        background: url("../img/gradient@1x-desktop.jpg"),
+        background: url("../img/gradient-left.jpg"),
+        url("../img/gradient-right.jpg"),
         url("../img/gradient@1x-desktop.jpg");
-        background-size: $max-width 658px, 100% auto;
-        background-position: center, center;
-        background-repeat: no-repeat, no-repeat;
+        background-size: calc((100% - 1366px)/2 + 134px) 658px, 
+        calc((100% - 1366px)/2 + 134px) 658px,
+        $max-width auto;
+        background-position: left, right, center;
+        background-repeat: no-repeat, no-repeat, no-repeat;
         height: 658px;
         margin: 0 auto;
         width: 100%;

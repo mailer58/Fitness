@@ -830,6 +830,15 @@ const setAccountsHeight = () => {
             phoneInput.setCustomValidity('');
         }
 
-    })
+    });
+
+    // позиционирование списка для Safari:
+    const userAgent = navigator.userAgent.toLowerCase();
+
+	const safari = /safari/.test(userAgent);
+    if (safari) {
+        const featuresList = document.querySelector('.page-header__list');
+        featuresList.style.left = '-' + 8 + 'px';
+    }
 })();
 

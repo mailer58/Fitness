@@ -44,13 +44,6 @@
     margin-bottom: 22px;
 }
 
-.actions__card-description-wrapper {
-    height: 47px;
-    margin-bottom: 25px;
-    padding-right: 15px;
-    overflow: auto;
-}
-
 .actions__description {
     text-align: center;
     color: $white;
@@ -109,6 +102,11 @@
     margin-bottom: 12px;
 }
 
+.actions__card-description-wrapper {
+    margin-bottom: 10px;
+    min-height: 85px;
+}
+
 .actions__card-description {
     line-height: 22px;
     color: rgb(28, 51, 116);
@@ -165,10 +163,6 @@
     .actions__period {
         font-size: 28px;
         line-height: 44px;
-    }
-
-    .actions__card-description-wrapper {
-        margin-bottom: 48px;
     }
 
     .actions__description {
@@ -238,23 +232,25 @@
         }
     }
 
+    .actions__description {
+        margin-bottom: 15px;
+        min-height: 224px;
+    }
+
     .actions__main-gradient-wrapper {
         flex-direction: column;
+        justify-content: space-between;
         align-items: flex-end;
     }
 
     .actions__gradient-wrapper {
         width: 559px;
+        margin-bottom: 34px;
+        padding-bottom: 24px;
     }
 
     .actions__card-title {
         margin-bottom: 9px;
-    }
-
-    .actions__card-description-wrapper {
-        height: 70px;
-        margin-bottom: 25px;
-        padding-right: 15px;
     }
 
     .actions__card-description {
